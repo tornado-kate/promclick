@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.title-1,
+.title-2,
+.title-3,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: $font-family;
+    font-style: normal;
+}
+
+h2 {
+    color: #000;
+
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    margin-bottom: 36px;
+}

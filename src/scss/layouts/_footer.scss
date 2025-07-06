@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+@use '../components/media' as *;
+
+.footer {
+
+    &__row-nav {
+        display: flex;
+        gap: 5px;
+    }
+    &-nav {
+        &__link {
+            color: var(--ColorsGray1);
+            //font-family: "Inter Display";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+        }
+    }
+    &__bottom {
+        display: grid;
+        gap: 16px;
+        //font-family: "Inter Display";
+        color: var(--ColorsGray1);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+    }
+    &__text {
+
+    }
+}
