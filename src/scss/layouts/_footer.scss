@@ -2,15 +2,25 @@
 @use '../components/media' as *;
 
 .footer {
+    margin-top: 200px;
+    margin-bottom: 120px;
 
     &__row-nav {
         display: flex;
-        gap: 5px;
+        gap: var(--Gap-2x);
+        margin-bottom: 44px;
     }
     &-nav {
+        width: 258px;
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
         &__link {
             color: var(--ColorsGray1);
-            //font-family: "Inter Display";
+            font-family: $font-interDisplay;
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
@@ -19,15 +29,12 @@
     }
     &__bottom {
         display: grid;
-        gap: 16px;
-        //font-family: "Inter Display";
+        gap: var(--Gap-1x);
+        font-family: $font-interDisplay;
         color: var(--ColorsGray1);
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
-    }
-    &__text {
-
     }
 }

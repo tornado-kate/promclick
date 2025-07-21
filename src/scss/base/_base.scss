@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    font-family: $font-family;
+    font-family: $font-inter;
     color: var(--ColorsBlack);
     font-weight: 400;
     line-height: 150%;
@@ -36,11 +36,12 @@ a {
 }
 
 .btn {
+    font-family: $font-inter;
     padding: 15px 40px;
     border-radius: 8px;
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 120%;
 
     &-primary {
@@ -54,9 +55,22 @@ a {
         padding: 15px 24px;
         border: 2px solid var(--ColorsBlack);
     }
+
+    &.btn-m {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &:disabled {
+        border: 0;
+        color: var(--ColorsGray2);
+        background: linear-gradient(0deg, #F5F5F5 0%, #F5F5F5 100%), #0074EC;
+    }
+
 }
 
 .main-slider {
+    margin-top: 46px;
 
     &__item {
         border-radius: 40px;
@@ -78,6 +92,7 @@ a {
 .news-promo-card {
     display: grid;
     gap: var(--Gap-2x);
+    padding-bottom: 87px;
 
     &__title {
         display: block;
@@ -97,5 +112,43 @@ a {
     &__date {
         margin-left: 22px;
         margin-right: 25px;
+    }
+}
+
+.form-callback {
+    margin-top: 150px;
+
+    &__title {
+        color: var(--ColorsBlack);
+        font-family: $font-inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    &__form {
+        align-items: flex-start;
+        width: 960px;
+        padding: 32px 44px 40px 44px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--Gap-3x);
+    }
+
+    &__input {
+        color: var(--ColorsBlack);
+        border: 0;
+        font-family: $font-inter;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -5px;
+        width: 100%;
+
+        &::placeholder {
+            color: var(--ColorsGray3);
+        }
     }
 }

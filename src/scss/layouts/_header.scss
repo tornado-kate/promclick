@@ -20,12 +20,20 @@
         align-items: center;
     }
 
-    &__link {
+    &__phone {
         color: var(--ColorsBlack);
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: -0.2px;
+    }
+
+    &__mail {
+        color: var(--ColorsBlack);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 }

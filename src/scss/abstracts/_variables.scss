@@ -1,12 +1,21 @@
 :root {
+    --fontInter: 'Inter', sans-serif;
+    --fontInterDisplay: 'InterDisplay', sans-serif;
+
     --ColorsGray1: #8E959B;
+    --ColorsGray2: #CFCFCF;
+    --ColorsGray3: #E4E4E4;
     --ColorsWhite: #ffffff;
     --ColorsBlack: #000000;
     --ColorsBlue:  #0074EC;
 
     --Gap-1x: 12px;
     --Gap-2x: 16px;
+    --Gap-3x: 24px;
     --transition-base: all 0.3s ease-out;
+
+
 }
 
-$font-family:       'Inter', sans-serif;
+$font-inter: var(--fontInter), sans-serif;
+$font-interDisplay: var(--fontInterDisplay), sans-serif;
