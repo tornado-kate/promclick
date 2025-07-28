@@ -191,3 +191,40 @@
     }
 }
 
+.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    background-image: url(/images/icons/arrow-down.svg);
+    background-position: right .75rem center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    color: var(--ColorsBlack);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    display: block;
+    height: 52px;
+    overflow: hidden;
+    padding: 14px 16px;
+    text-overflow: ellipsis;
+    transition: border-color .3s ease-in-out;
+    white-space: nowrap;
+    width: 100%;
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: none;
+        border: 1px solid #E0E0E0;
+        outline: none;
+    }
+
+    & + label {
+        display: none;
+    }
+}
+

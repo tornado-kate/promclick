@@ -1,7 +1,9 @@
 import {Swiper, SwiperSlide } from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, Thumbs } from 'swiper/modules';
+import 'swiper/css/free-mode';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/thumbs';
 //import { Fancybox } from "@fancyapps/ui";
 //window.Fancybox = Fancybox;
 //import "@fancyapps/ui/dist/fancybox.css";
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'bullets',
             clickable: true
         },
+        // touchRatio: 0.2,
         /*on: {
             slideChangeTransitionStart: function() {
                 // Удаляем стили масштабирования
@@ -35,4 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
         //     disableOnInteraction: false
         // }
     })
+
+    const catalogGallery = new Swiper(".catalog-gallery-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    const catalogGalleryThumbs = new Swiper(".catalog-gallery", {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: catalogGallery,
+        },
+    });
 })
