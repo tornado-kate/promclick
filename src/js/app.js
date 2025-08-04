@@ -50,5 +50,48 @@ document.addEventListener('DOMContentLoaded', () => {
         thumbs: {
             swiper: catalogGallery,
         },
-    });
+    })
+
+
+    document.querySelectorAll('.catalog-list__items').forEach((list) => {
+        const items = list.querySelectorAll('li')
+        const showMoreLink = list.querySelector('.catalog-list__show-more')
+
+        if (items.length > 3 && showMoreLink) {
+            const totalCount = items.length
+            const remainingCount = totalCount - 3
+            showMoreLink.textContent = `Ещё +${remainingCount}`
+
+            // Изначально скрываем все, начиная с 4-го
+            for (let i = 3; i < totalCount; i++) {
+                if (!items[i].classList.contains('catalog-list__item-show-more')) {
+                    items[i].style.display = 'none'
+                }
+            }
+
+            showMoreLink.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                if (!expanded) {
+                    // Раскрываем все элементы
+                    for (let i = 3; i < totalCount; i++) {
+                        items[i].style.display = '';
+                    }
+                    // Меняем текст на "Свернуть"
+                    showMoreLink.textContent = 'Свернуть';
+                    expanded = true;
+                } else {
+                    // Снова скрываем все, кроме элементов с классом .catalog-list__item-show-more
+                    for (let i = 3; i < totalCount; i++) {
+                        if (!items[i].classList.contains('catalog-list__item-show-more')) {
+                            items[i].style.display = 'none';
+                        }
+                    }
+                    // Возвращаем исходный текст
+                    showMoreLink.textContent = initialText;
+                    expanded = false;
+                }
+            });
+        }
+    })
 })
