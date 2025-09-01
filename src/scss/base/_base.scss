@@ -45,14 +45,14 @@ a {
 .svg-search {
     height: 32px;
     width: 32px;
-    mask-image: url('/images/icons/search-icon.svg');
+    mask-image: url('../../images/icons/search-icon.svg');
     background-color: #EDEDED;
 }
 
 .svg-close-menu {
     height: 24px;
     width: 24px;
-    mask-image: url('/images/icons/close-btn.svg');
+    mask-image: url('../../images/icons/close-btn.svg');
     background-color: var(--ColorsBlack);
 }
 
@@ -120,7 +120,7 @@ a {
             width: 6px;
             left: -13px;
             position: absolute;
-            background: url('/images/icons/arrow-right.svg') no-repeat;
+            background: url('../../images/icons/arrow-right.svg') no-repeat;
             top: 50%;
             transform: translateY(-50%);
             vertical-align: middle;
