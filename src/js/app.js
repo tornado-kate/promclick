@@ -9,6 +9,49 @@ import 'swiper/css/thumbs';
 //import "@fancyapps/ui/dist/fancybox.css";
 
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body
+    const toggleMegaMenu = document.querySelector('.header__toggle-menu')
+    const megaMenu = document.querySelector('.mega-menu')
+
+    toggleMegaMenu.addEventListener('click', () => {
+        toggleMegaMenu.classList.toggle('is-active')
+        megaMenu.classList.toggle('is-active')
+        body.classList.toggle('no-scroll')
+        document.documentElement.classList.toggle('no-scroll')
+    })
+
+    const menuItems = document.querySelectorAll('.navbar__item')
+    const contentItems = document.querySelectorAll('.mega-menu__item')
+
+    if (menuItems.length > 0 && contentItems.length > 0) {
+        menuItems[0].classList.add('is-active')
+        contentItems.forEach(content => {
+            if (content.getAttribute('data-content') === menuItems[0].getAttribute('data-navbar')) {
+                content.style.display = 'block'
+            } else {
+                content.style.display = 'none'
+            }
+        });
+    }
+    menuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const targetTab = item.getAttribute('data-navbar')
+
+            // Удаляем активный класс у всех пунктов (если есть)
+            menuItems.forEach(i => i.classList.remove('is-active'))
+            // Добавляем активный класс текущему
+            item.classList.add('is-active')
+
+            // Переключение контентов
+            contentItems.forEach(content => {
+                if (content.getAttribute('data-content') === targetTab) {
+                    content.style.display = 'block' // показываем нужный
+                } else {
+                    content.style.display = 'none' // скрываем остальные
+                }
+            })
+        })
+    })
 
     const mainSlider = new Swiper('.main-slider', {
         modules: [Pagination, Autoplay],
@@ -59,8 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (items.length > 3 && showMoreLink) {
             const totalCount = items.length
-            const remainingCount = totalCount - 3
-            showMoreLink.textContent = `Ещё +${remainingCount}`
+            const remainingCount = totalCount - 4
+            const initialText = `Ещё ${remainingCount}`
+            showMoreLink.textContent = initialText
 
             // Изначально скрываем все, начиная с 4-го
             for (let i = 3; i < totalCount; i++) {
@@ -68,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     items[i].style.display = 'none'
                 }
             }
+
+            let expanded = false
 
             showMoreLink.addEventListener('click', (e) => {
                 e.preventDefault();

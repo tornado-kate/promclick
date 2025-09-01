@@ -4,6 +4,7 @@
 html, body {
     scrollbar-width: thin;
     //overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -48,6 +49,13 @@ a {
     background-color: #EDEDED;
 }
 
+.svg-close-menu {
+    height: 24px;
+    width: 24px;
+    mask-image: url('/images/icons/close-btn.svg');
+    background-color: var(--ColorsBlack);
+}
+
 .btn {
     font-family: $font-inter;
     padding: 15px 40px;
@@ -56,6 +64,7 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    height: 52px;
 
     &-primary {
         color: var(--ColorsWhite);
@@ -71,7 +80,7 @@ a {
         color: var(--ColorsBlack);
         font-weight: 400;
         padding: 15px 24px;
-        border: 2px solid var(--ColorsBlack);
+        box-shadow: inset 0 0 0 2px var(--ColorsBlack);
     }
 
     &.btn-m {
@@ -146,27 +155,32 @@ a {
 
 .main-slider {
     margin-top: 46px;
-    margin-bottom: 70px;
+    margin-bottom: 140px;
 
     &.swiper {
         width: 100%;
         overflow: visible;
     }
-    &.swiper-horizontal > .swiper-pagination-bullets {
-        bottom: -40px;
+    &.swiper-horizontal {
+        & > .swiper-pagination-bullets {
+            bottom: -70px;
+
+            .swiper-pagination-bullet {
+                margin: 0 6px;
+            }
+        }
+        .swiper-pagination-bullet {
+            width: 22px;
+            height: 22px;
+            opacity: 1;
+            background-color: var(--ColorsGray7);
+
+            &.swiper-pagination-bullet-active {
+
+                background-color: var(--ColorsBlue2);
+            }
+        }
     }
-    .swiper-pagination-bullet {
-        width: 22px;
-        height: 22px;
-        opacity: 1;
-        background-color: var(--ColorsGray7);
-
-       &.swiper-pagination-bullet-active {
-
-           background-color: var(--ColorsBlue2);
-       }
-    }
-
 
     &__item {
         border-radius: 40px;

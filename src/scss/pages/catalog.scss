@@ -49,6 +49,10 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
 
         li:nth-child(n+4):not(.catalog-list__item-show-more) {
             //display: none;
@@ -56,10 +60,28 @@
     }
     &__link {
         color: var(--ColorsGray5);
+    }
+    &__show-more {
+        color: var(--ColorsBlue);
+    }
+}
+
+.catalog-section {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 56px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__title {
+        color: var(--ColorsBlack);
+        text-align: center;
         font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
+        font-weight: 600;
+        line-height: 130%;
     }
 }
 
