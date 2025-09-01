@@ -169,16 +169,16 @@ a {
 .svg-search {
   height: 32px;
   width: 32px;
-  -webkit-mask-image: url("/images/icons/search-icon.svg");
-  mask-image: url("/images/icons/search-icon.svg");
+  -webkit-mask-image: url("../../images/icons/search-icon.svg");
+  mask-image: url("../../images/icons/search-icon.svg");
   background-color: #EDEDED;
 }
 
 .svg-close-menu {
   height: 24px;
   width: 24px;
-  -webkit-mask-image: url("/images/icons/close-btn.svg");
-  mask-image: url("/images/icons/close-btn.svg");
+  -webkit-mask-image: url("../../images/icons/close-btn.svg");
+  mask-image: url("../../images/icons/close-btn.svg");
   background-color: var(--ColorsBlack);
 }
 
