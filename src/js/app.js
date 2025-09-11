@@ -140,4 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     })
+
+
+    const tabs = document.querySelectorAll('.nav-tabs__item')
+    const contents = document.querySelectorAll('.tab-content')
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab')
+
+            tabs.forEach(t => t.classList.remove('is-active'))
+            contents.forEach(c => c.classList.remove('is-active'))
+
+            tab.classList.add('is-active')
+
+            document.getElementById(target).classList.add('is-active')
+        });
+    });
 })
