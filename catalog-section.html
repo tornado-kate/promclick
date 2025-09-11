@@ -129,53 +129,341 @@
                 <span class="catalog-section__title">Ступени</span>
             </a>
         </div>
-        <div class="catalog-filter">
-            <div class="catalog-filter__items">
-                <div class="catalog-filter__item">
-                    <div class="catalog-filter__title">Тип</div>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        Сварной
-                    </label>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        Прессованный
-                    </label>
-                </div>
-                <div class="catalog-filter__item">
-                    <div class="catalog-filter__title">Ячейка</div>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        30 x 30
-                    </label>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        30 x 30
-                    </label>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        30 x 30
-                    </label>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        30 x 30
-                    </label>
-                    <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" hidden="" value="" checked>
-                        30 x 30
-                    </label>
-                </div>
-                <div class="catalog-filter__item">
-                    <div class="catalog-filter__title">Цвет</div>
-                </div>
+        <div class="catalog-tabs">
+            <div class="nav-tabs" id="tabs">
+                <button class="nav-tabs__item" data-tab="content1">Описание</button>
+                <button class="nav-tabs__item" data-tab="content2">Производство</button>
+                <button class="nav-tabs__item is-active" data-tab="content3">Товары</button>
             </div>
-            <div class="">
-                <div class="catalog-list">
-                    <div class="catalog__item">
+            <section id="content1" class="tab-content">
+                <div class="catalog-desc">
+                    <div class="catalog-detail__sect">
+                        <h2 class="catalog-detail__sect-title">Описание</h2>
+                        <div class="catalog-detail__sect-text">
+                            <p>Композитный решетчатый настил GFK ECO 19x19x30 4040x1524 RAL7040 изготавливается из ортофталевой полиэфирной смолы. Цвет изделия выбирается заказчиком по каталогу RAL. GFK настилы экономически выгодны из-за своей долговечности и длительного срока службы, что позволяет сократить затраты на обслуживание и ремонт. Благодаря легкости материала, композитные настилы удобны в установке и обеспечивают уменьшение нагрузки на строительные конструкции. Обладают высокой прочностью, что делает их идеальным выбором для объектов с высокой проходимостью и нагрузками.</p>
+                            <p>Высокая стойкость к деформации при высокой нагрузке, что значительно экономит денежные средства, которые потребовались бы для ремонта или замены менее надежных конструкций. Наличие зубьев противоскольжения обеспечивает безопасность людям, которые передвигаются по поверхностям с настилом, особенно на производственных участках, загрязненных маслами или жирами или на участках, где большую часть года минусовая температура. Устойчивость к атмосферным воздействиям: низким или высоким температурам, влиянию агрессивных веществ.</p>
+                            <p>Простой монтаж, что опять же экономит силы и средства при возведении конструкций. Дизайн. Благодаря четким линиям, решетки отлично вписываются в современный облик городов.</p>
+                        </div>
+                    </div>
 
+                    <div class="catalog-detail__sect">
+                        <h2 class="catalog-detail__sect-title">Характеристики</h2>
+                        <div class="catalog-detail__parameters">
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Размер</div>
+                                <div class="catalog-detail__parameters-val">4040 × 1520 мм</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Ячейка</div>
+                                <div class="catalog-detail__parameters-val">19 × 19 мм</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Высота</div>
+                                <div class="catalog-detail__parameters-val">50 мм</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Поверхность</div>
+                                <div class="catalog-detail__parameters-val">вогнутая</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Противоскольжение</div>
+                                <div class="catalog-detail__parameters-val">есть</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Тип настила</div>
+                                <div class="catalog-detail__parameters-val">стеклопластиковый настил GFK</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Смола</div>
+                                <div class="catalog-detail__parameters-val">изофталевая</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Цвет</div>
+                                <div class="catalog-detail__parameters-val">серый, 7040 RAL</div>
+                            </div>
+                            <div class="catalog-detail__parameters-item">
+                                <div class="catalog-detail__parameters-name">Вес</div>
+                                <div class="catalog-detail__parameters-val">135 кг</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-detail__sect">
+                        <h2 class="catalog-detail__sect-title">Сертификаты</h2>
+                        <div class="catalog-detail__cert">
+                            <a href="#" class="catalog-detail__cert-item">
+                                <span class="catalog-detail__cert-name">Стандарт ISO 2678 Применение настилов в агрессивных средах</span>
+                                <span class="catalog-detail__cert-pdf">PDF 1,6 Mб</span>
+                            </a>
+                            <a href="#" class="catalog-detail__cert-item">
+                                <span class="catalog-detail__cert-name">Стандарт ISO 2678 Применение настилов в агрессивных средах</span>
+                                <span class="catalog-detail__cert-pdf">PDF 1,6 Mб</span>
+                            </a>
+                            <a href="#" class="catalog-detail__cert-item">
+                                <span class="catalog-detail__cert-name">Стандарт ISO 2678 Применение настилов в агрессивных средах</span>
+                                <span class="catalog-detail__cert-pdf">PDF 1,6 Mб</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="catalog-tags">
+                        <h3 class="catalog-tags__title">На также ищут</h3>
+                        <div class="catalog-tags__row">
+                            <a href="#" class="catalog-tags__item">Тег 1</a>
+                            <a href="#" class="catalog-tags__item">Тег 2</a>
+                            <a href="#" class="catalog-tags__item">Тег 3</a>
+                            <a href="#" class="catalog-tags__item">Тег 4</a>
+                            <a href="#" class="catalog-tags__item">Тег 5</a>
+                            <a href="#" class="catalog-tags__item">Тег 6</a>
+                            <a href="#" class="catalog-tags__item">Тег 7</a>
+                            <a href="#" class="catalog-tags__item">Тег 8</a>
+                            <a href="#" class="catalog-tags__item">Тег 9</a>
+                            <a href="#" class="catalog-tags__item">Тег 10</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section id="content2" class="tab-content">
+                Производство
+            </section>
+            <section id="content3" class="tab-content is-active">
+                <div class="catalog-filter">
+                    <div class="catalog-filter__items">
+                        <div class="catalog-filter__item">
+                            <ul class="filter-cat">
+                                <li>
+                                    <a href="#" class="filter-cat__link is-active">Решетчатый настил</a>
+                                    <ul class="filter-cat__items">
+                                        <li>
+                                            <a href="#" class="filter-cat__link">Сварной</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="filter-cat__link">Прессованный</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="filter-cat__link">Ступени</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-filter__item">
+                            <div class="catalog-filter__title">Тип</div>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="" checked>
+                                Сварной
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="">
+                                Прессованный
+                            </label>
+                        </div>
+                        <div class="catalog-filter__item">
+                            <div class="catalog-filter__title">Ячейка</div>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="" checked>
+                                30 x 30
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="" checked>
+                                30 x 30
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="">
+                                30 x 30
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="">
+                                30 x 30
+                            </label>
+                            <label class="form-check">
+                                <input type="checkbox" class="form-check__input" value="">
+                                30 x 30
+                            </label>
+                        </div>
+                        <div class="catalog-filter__item">
+                            <div class="catalog-filter__title">Цвет</div>
+                            <div class="catalog-filter__colors">
+                                <div class="filter-colors">
+                                    <div class="filter-colors__item">
+                                        <input id="color-1" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-1" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-2" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-2" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-3" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-3" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-4" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-4" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-5" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-5" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-6" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-6" class="filter-colors__label"></label>
+                                    </div>
+                                    <div class="filter-colors__item">
+                                        <input id="color-7" type="checkbox" class="filter-colors__input" name="colors" value="">
+                                        <label for="color-7" class="filter-colors__label"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="catalog-list">
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                            <a href="#" class="catalog-list__item">
+                                <img src="images/temp/catalog-list.png" alt="" />
+                                <span class="catalog-list__status">В наличии</span>
+                                <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
+                                <span class="catalog-list__price">58 040 ₽</span>
+                                <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
+                            </a>
+                        </div>
+                        <button class="btn-more">Ещё 20</button>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </main>
