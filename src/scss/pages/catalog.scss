@@ -26,7 +26,7 @@
 .catalog-list {
     display: grid;
     grid-template: auto / repeat(4, 1fr);
-    gap: 64px 40px;
+    gap: 56px var(--Gap-2x);
 
     &__section {
         display: flex;
@@ -210,13 +210,27 @@
     font-family: $font-inter;
     margin-bottom: 56px;
 
+    &__item {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        border-radius: 20px;
+    }
+
+    &__wrap {
+        padding: 0 4px;
+    }
+
     &__status {
         display: block;
         color: var(--ColorsGreen);
         font-size: 13px;
         font-weight: 500;
         line-height: 120%;
-        margin-bottom: 7px;
+        margin: 8px 0;
     }
 
     &__title {

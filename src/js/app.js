@@ -82,6 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // }
     })
 
+    const mainNewsSlider = new Swiper('.main-news-slider', {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+    })
+
+    const mainPromoSlider = new Swiper('.main-promo-slider', {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+    })
+
     const catalogGallery = new Swiper(".catalog-gallery-thumbs", {
         spaceBetween: 10,
         slidesPerView: 4,

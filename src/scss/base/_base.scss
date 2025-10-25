@@ -14,6 +14,11 @@ main {
     box-sizing: border-box;
 }
 
+button {
+    border: none;
+    background: none;
+}
+
 body {
     font-family: $font-inter;
     color: var(--ColorsBlack);
@@ -268,11 +273,8 @@ a {
 }
 
 .news-promo {
+    padding-bottom: 87px;
 
-    &__row {
-        display: flex;
-        gap: var(--Gap-1x);
-    }
     &__head {
         display: flex;
         justify-content: space-between;
@@ -291,10 +293,28 @@ a {
     }
 }
 
+.main-news-slider,
+.main-promo-slider {
+
+    .swiper-slide {
+        width: 352px;
+        height: auto;
+    }
+}
+
 .news-promo-card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--Gap-2x);
-    padding-bottom: 87px;
+    height: 100%;
+
+    &__img {
+        margin-bottom: var(--Gap-2x);
+    }
+
+    &__top {
+        margin-bottom: auto;
+    }
 
     &__title {
         display: block;
