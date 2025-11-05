@@ -17,12 +17,28 @@
             <div class="header__right">
                 <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
                 <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
-                <a href=""><i class="svg-icon svg-search"></i></a>
+                <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
                 <a href="#" class="btn btn-primary">Оставить заявку</a>
             </div>
         </div>
     </div>
 </header>
+<div class="top-search">
+    <div class="container">
+        <div class="top-search__wrap">
+            <form class="form-search">
+                <div class="form-search__wrap">
+                    <div class="form-group">
+                        <label for="input-search"></label>
+                        <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
+                    </div>
+                    <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
+                </div>
+            </form>
+            <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+        </div>
+    </div>
+</div>
 <div class="mega-menu">
     <div class="container">
         <div class="mega-menu__row">
@@ -115,18 +131,18 @@
             <h1>Решетчатый настил</h1>
             <span class="catalog__count">780 товаров</span>
         </div>
-        <div class="catalog-section">
-            <a href="#" class="catalog-section__item">
+        <div class="catalog__subsection">
+            <a href="#" class="catalog__subsection-item">
                 <img src="images/temp/catalog-section-1.png" alt="" />
-                <span class="catalog-section__title">Сварной</span>
+                <span class="catalog__subsection-title">Сварной</span>
             </a>
-            <a href="#" class="catalog-section__item">
+            <a href="#" class="catalog__subsection-item">
                 <img src="images/temp/catalog-section-2.png" alt="" />
-                <span class="catalog-section__title">Прессованный</span>
+                <span class="catalog__subsection-title">Прессованный</span>
             </a>
-            <a href="#" class="catalog-section__item">
+            <a href="#" class="catalog__subsection-item">
                 <img src="images/temp/catalog-section-3.png" alt="" />
-                <span class="catalog-section__title">Ступени</span>
+                <span class="catalog__subsection-title">Ступени</span>
             </a>
         </div>
         <div class="catalog-tabs">
@@ -144,6 +160,10 @@
                             <p>Высокая стойкость к деформации при высокой нагрузке, что значительно экономит денежные средства, которые потребовались бы для ремонта или замены менее надежных конструкций. Наличие зубьев противоскольжения обеспечивает безопасность людям, которые передвигаются по поверхностям с настилом, особенно на производственных участках, загрязненных маслами или жирами или на участках, где большую часть года минусовая температура. Устойчивость к атмосферным воздействиям: низким или высоким температурам, влиянию агрессивных веществ.</p>
                             <p>Простой монтаж, что опять же экономит силы и средства при возведении конструкций. Дизайн. Благодаря четким линиям, решетки отлично вписываются в современный облик городов.</p>
                         </div>
+                    </div>
+
+                    <div class="catalog-detail__sect">
+                    <img src="images/temp/catalog-detail-910x417.png" alt="" />
                     </div>
 
                     <div class="catalog-detail__sect">
@@ -187,6 +207,13 @@
                             </div>
                         </div>
                     </div>
+
+                    <section class="catalog-detail__sect">
+                        <h2 class="catalog-detail__sect-title">Применение</h2>
+                        <div class="catalog-detail__sect-text">
+                            Композитная решетка GFK ECO благодаря прочности, антикоррозийным свойствам и устойчивости к температурным, химическим и физическим воздействиям пользуется большим спросом в строительно-промышленном комплексе. Она находит широкое применение в инфраструктуре промышленных объектов, общественных зданий, в транспортно-логистической сфере. В торговых центрах, аэропортах, спортивных сооружениях композитные настилы GFK могут использоваться для создания привлекательных и безопасных покрытий. Примеров применения композитных настилов огромное множество, что доказывает их универсальность, прочность и адаптивность к различным условиям и потребностям различных отраслей.
+                        </div>
+                    </section>
 
                     <div class="catalog-detail__sect">
                         <h2 class="catalog-detail__sect-title">Сертификаты</h2>
@@ -287,37 +314,33 @@
                                 <div class="filter-colors">
                                     <div class="filter-colors__item">
                                         <input id="color-1" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-1" class="filter-colors__label"></label>
+                                        <label for="color-1" class="filter-colors__label" style="background-color: #FFDB00"></label>
                                     </div>
                                     <div class="filter-colors__item">
-                                        <input id="color-2" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-2" class="filter-colors__label"></label>
+                                        <input id="color-2" type="checkbox" class="filter-colors__input" name="colors" value="" checked>
+                                        <label for="color-2" class="filter-colors__label" style="background-color: #10C44C"></label>
                                     </div>
                                     <div class="filter-colors__item">
                                         <input id="color-3" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-3" class="filter-colors__label"></label>
+                                        <label for="color-3" class="filter-colors__label" style="background-color: #007AFF"></label>
                                     </div>
                                     <div class="filter-colors__item">
                                         <input id="color-4" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-4" class="filter-colors__label"></label>
+                                        <label for="color-4" class="filter-colors__label" style="background-color: #8E959B"></label>
                                     </div>
                                     <div class="filter-colors__item">
                                         <input id="color-5" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-5" class="filter-colors__label"></label>
-                                    </div>
-                                    <div class="filter-colors__item">
-                                        <input id="color-6" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-6" class="filter-colors__label"></label>
-                                    </div>
-                                    <div class="filter-colors__item">
-                                        <input id="color-7" type="checkbox" class="filter-colors__input" name="colors" value="">
-                                        <label for="color-7" class="filter-colors__label"></label>
+                                        <label for="color-5" class="filter-colors__label" style="background-color: #FF0000"></label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="">
+                        <div class="catalog-filter__param">
+                            <span class="catalog-filter__param-item">Сварной <span class="svg-icon svg-close-filter-param"></span></span>
+                            <span class="catalog-filter__param-reset">Сбросить</span>
+                        </div>
                         <div class="catalog-list">
                             <a href="#" class="catalog-list__item">
                                 <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />

@@ -17,12 +17,28 @@
             <div class="header__right">
                 <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
                 <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
-                <a href=""><i class="svg-icon svg-search"></i></a>
+                <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
                 <a href="#" class="btn btn-primary">Оставить заявку</a>
             </div>
         </div>
     </div>
 </header>
+<div class="top-search">
+    <div class="container">
+        <div class="top-search__wrap">
+            <form class="form-search">
+                <div class="form-search__wrap">
+                    <div class="form-group">
+                        <label for="input-search"></label>
+                        <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
+                    </div>
+                    <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
+                </div>
+            </form>
+            <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+        </div>
+    </div>
+</div>
 <div class="mega-menu">
     <div class="container">
         <div class="mega-menu__row">
@@ -150,15 +166,27 @@
                             <div class="swiper catalog-gallery">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <img src="/images/temp/catalog-img-detail.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/images/temp/catalog-img-detail.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/images/temp/catalog-img-detail.jpg" alt="" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/images/temp/catalog-img-detail.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper catalog-gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
                                         <img src="/images/temp/catalog-img-1.jpg" alt="" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="/images/temp/catalog-img-1.jpg" alt="" />
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper catalog-gallery-thumbs" thumbsSlider="">
-                                <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="/images/temp/catalog-img-1.jpg" alt="" />
                                     </div>
@@ -185,8 +213,8 @@
                                 <div class="catalog-detail__spec-item">
                                     <div class="catalog-detail__spec-name">Ячейка, мм</div>
                                     <a href="#" class="catalog-detail__spec-value">19</a>
-                                    <a href="#" class="catalog-detail__spec-value is-active">38</a>
-                                    <a href="#" class="catalog-detail__spec-value">50</a>
+                                    <a href="#" class="catalog-detail__spec-value">38</a>
+                                    <a href="#" class="catalog-detail__spec-value is-active">50</a>
                                 </div>
                                 <div class="catalog-detail__spec-item">
                                     <div class="catalog-detail__spec-name">Поверхность</div>
@@ -316,7 +344,7 @@
                         Срок изготовления ~30 дней
                         <br>Доставим транспортной компанией 20 октября
                     </div>
-                    <a href="#" class="btn btn-secondary btn-m">Заказать</a>
+                    <a href="ajax/order.html" data-fancybox-ajax class="btn btn-secondary btn-m">Заказать</a>
                 </div>
             </div>
         </div>

@@ -69,8 +69,22 @@
     }
 
     &__btn-search {
-        &:hover {
+        cursor: pointer;
 
+        .svg-search {
+            transition: var(--transition-base);
+        }
+
+        &:hover {
+            .svg-search {
+                background-color: var(--ColorsBlack);
+            }
+        }
+    }
+    @include media(xl) {
+        &__phone,
+        &__mail {
+            font-size: 18px;
         }
     }
 }
@@ -78,7 +92,7 @@
 .mega-menu {
     background-color: #ffffff;
     position: fixed;
-    top: 136px;
+    top: 96px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -109,6 +123,11 @@
         font-style: normal;
         font-weight: 700;
         line-height: 120%;
+    }
+    @include media(xl) {
+        &__title {
+            font-size: 36px;
+        }
     }
 }
 
@@ -171,4 +190,82 @@
 .no-scroll {
     overflow: hidden;
     overscroll-behavior-y: none;
+}
+
+.top-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: 96px;
+    background: var(--ColorsGray8);
+    padding: 21px 0 23px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    &__close {
+        cursor: pointer;
+    }
+}
+
+.form-search {
+    flex: 1;
+
+    .form-group {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    &__btn {
+        width: 132px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        &.is-focused {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+    }
+
+    &__input {
+        background: transparent;
+        color: var(--ColorsBlack);
+        border: 0;
+        font-family: var(--fontInter), sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 125%;
+        width: 100%;
+
+        &::placeholder {
+            color: #D3D3D3;
+        }
+        &:focus-visible {
+            border: none;
+            outline: none;
+        }
+    }
 }

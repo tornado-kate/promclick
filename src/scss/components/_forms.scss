@@ -7,13 +7,16 @@
 }
 
 .form-control {
-    height: 48px;
-    //border-radius: ;
-    //border: 1px solid ;
-    padding: 12px;
-    line-height: 24px;
-    //background-color: ;
-    //color: ;
+    color: var(--ColorsBlack);
+    border: 0;
+    font-family: var(--fontInter), sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -5px;
+    width: 100%;
+    height: 115px;
     margin: 0;
 
     &:disabled {
@@ -47,7 +50,7 @@
     }
 
     &::placeholder {
-        //color: ;
+        color: var(--ColorsGray3);
     }
 
     @include media(md) {
@@ -112,7 +115,7 @@
     }
 
     &__input {
-        display: none;
+        display: none !important;
     }
 
     &.is-invalid:before {
@@ -243,5 +246,51 @@
     & + label {
         display: none;
     }
+}
+
+.form-modal {
+    width: 960px;
+
+    &__title {
+        margin-bottom: 40px;
+
+        &-item {
+            color: var(--ColorsBlue2);
+            font-family: $font-inter;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            border-bottom: 1px dashed var(--ColorsBlue2);
+            cursor: pointer;
+
+            &:has(input:checked){
+                border-bottom: 1px dashed transparent;
+                color: var(--ColorsBlack);
+            }
+
+            input {
+               display: none !important;
+            }
+        }
+    }
+
+    .form-group {
+        margin-bottom: 40px;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+}
+
+.f-html {
+    background: #FFF !important;
+    box-shadow: 0 4px 24.5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 40px;
+    padding: 32px 44px 40px 44px !important;
 }
 

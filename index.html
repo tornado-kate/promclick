@@ -23,6 +23,22 @@
                 </div>
             </div>
         </header>
+        <div class="top-search">
+            <div class="container">
+                <div class="top-search__wrap">
+                    <form class="form-search">
+                        <div class="form-search__wrap">
+                            <div class="form-group">
+                                <label for="input-search"></label>
+                                <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
+                            </div>
+                            <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
+                        </div>
+                    </form>
+                    <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+                </div>
+            </div>
+        </div>
         <div class="mega-menu">
             <div class="container">
                 <div class="mega-menu__row">
@@ -110,36 +126,39 @@
             </div>
         </div>
         <main>
-            <div class="container">
-                <section class="swiper main-slider">
-                    <div class="swiper-wrapper">
-                        <div class="main-slider__item main-slider__item--is-white swiper-slide">
-                            <h2 class="main-slider__title">Онлайн-строймаркет</h2>
-                            <div class="main-slider__text">
-                                Конструкции из металла и стеклопластика
-                                <br/>для промышленного и гражданского строительства
-                                <br/>с доставкой по России и СНГ.
+            <section class="sect-main-slider">
+                <div class="container">
+                    <div class="swiper main-slider">
+                        <div class="swiper-wrapper">
+                            <div class="main-slider__item main-slider__item--is-white swiper-slide">
+                                <h2 class="main-slider__title">Онлайн-строймаркет</h2>
+                                <div class="main-slider__text">
+                                    Конструкции из металла и стеклопластика
+                                    <br/>для промышленного и гражданского строительства
+                                    <br/>с доставкой по России и СНГ.
+                                </div>
+                                <a href="#" class="btn btn-outline-secondary2 main-slider__btn">О компании <span class="svg-icon svg-arrow-btn-secondary"></span></a>
                             </div>
-                            <a href="#" class="btn btn-outline-secondary main-slider__btn">О компании</a>
+                            <div class="main-slider__item main-slider__item--is-text swiper-slide">
+                                <h2 class="main-slider__title">Стальной настил</h2>
+                                <img src="images/temp/main-slider-1.png" alt="" />
+                                <a href="#" class="btn btn-outline-secondary3 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
+                            </div>
+                            <div class="main-slider__item main-slider__item--is-text swiper-slide">
+                                <h2 class="main-slider__title">Стальной настил</h2>
+                                <img src="images/temp/main-slider-1.png" alt="" />
+                                <a href="#" class="btn btn-outline-secondary2 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
+                            </div>
                         </div>
-                        <div class="main-slider__item main-slider__item--is-text swiper-slide">
-                            <h2 class="main-slider__title">Стальной настил</h2>
-                            <img src="images/temp/main-slider-1.png" alt="" />
-                            <a href="#" class="btn btn-outline-secondary main-slider__btn">Подробнее</a>
-                        </div>
-                        <div class="main-slider__item main-slider__item--is-text swiper-slide">
-                            <h2 class="main-slider__title">Стальной настил</h2>
-                            <img src="images/temp/main-slider-1.png" alt="" />
-                            <a href="#" class="btn btn-outline-secondary main-slider__btn">Подробнее</a>
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                </section>
-
+                </div>
+            </section>
+            <div class="container">
                 <section class="news-promo">
                     <div class="news-promo__head">
                         <h2 class="news-promo__title">Новости</h2>
-                        <a href="#" class="news-promo__link">Все записи</a>
+                        <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
                     </div>
 
                     <div class="swiper main-news-slider">
@@ -163,7 +182,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a class="news-promo-card">
+                                <a href="#" class="news-promo-card">
                                     <div class="news-promo-card__top">
                                         <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
                                         <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>
@@ -186,7 +205,7 @@
                 <section class="news-promo">
                     <div class="news-promo__head">
                         <h2 class="news-promo__title">Статьи</h2>
-                        <a href="#" class="news-promo__link">Все записи</a>
+                        <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
                     </div>
 
                     <div class="swiper main-promo-slider">
@@ -210,7 +229,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a class="news-promo-card">
+                                <a href="#" class="news-promo-card">
                                     <div class="news-promo-card__top">
                                         <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
                                         <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>

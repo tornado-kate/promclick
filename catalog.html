@@ -17,12 +17,28 @@
             <div class="header__right">
                 <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
                 <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
-                <a href=""><i class="svg-icon svg-search"></i></a>
+                <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
                 <a href="#" class="btn btn-primary">Оставить заявку</a>
             </div>
         </div>
     </div>
 </header>
+<div class="top-search">
+    <div class="container">
+        <div class="top-search__wrap">
+            <form class="form-search">
+                <div class="form-search__wrap">
+                    <div class="form-group">
+                        <label for="input-search"></label>
+                        <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
+                    </div>
+                    <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
+                </div>
+            </form>
+            <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+        </div>
+    </div>
+</div>
 <div class="mega-menu">
     <div class="container">
         <div class="mega-menu__row">
@@ -116,164 +132,161 @@
                 <h1>Каталог</h1>
                 <span class="catalog__count">5 780 товаров</span>
             </div>
-            <div class="catalog-list">
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+            <div class="catalog-section">
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога длинным названием
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел этого раздела с ещё более длинным названием</a>
+                            <a href="#" class="catalog-section__link">Подраздел этого раздела с ещё более длинным названием</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
-                        <li class="catalog-list__item-show-more">
-                            <a href="#" class="catalog-list__show-more">Ещё 1</a>
+                        <li class="catalog-section__item-show-more">
+                            <a href="#" class="catalog-section__show-more">Ещё 1</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога длинным названием
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел этого раздела с ещё более длинным названием</a>
+                            <a href="#" class="catalog-section__link">Подраздел этого раздела с ещё более длинным названием</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
-                        <li class="catalog-list__item-show-more">
-                            <a href="#" class="catalog-list__show-more">Ещё</a>
+                        <li class="catalog-section__item-show-more">
+                            <a href="#" class="catalog-section__show-more">Ещё</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
-                        Раздел каталога длинным названием
-                    </a>
-                    <ul class="catalog-list__items">
-                        <li>
-                            <a href="#" class="catalog-list__link">Подраздел этого раздела с ещё более длинным названием</a>
-                        </li>
-                        <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
-                        </li>
-                        <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
-                        </li>
-                        <li class="catalog-list__item-show-more">
-                            <a href="#" class="catalog-list__show-more">Ещё</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                     </ul>
                 </div>
-                <div class="catalog-list__item">
-                    <a href="#" class="catalog-list__section">
-                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-list__img img" alt="" />
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
                         Раздел каталога длинным названием
                     </a>
-                    <ul class="catalog-list__items">
+                    <ul class="catalog-section__items">
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел этого раздела с ещё более длинным названием</a>
+                            <a href="#" class="catalog-section__link">Подраздел этого раздела с ещё более длинным названием</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog-section__item">
+                    <a href="#" class="catalog-section__top">
+                        <img src="/images/temp/catalog-list-64x64.png" class="catalog-section__img img" alt="" />
+                        Раздел каталога длинным названием
+                    </a>
+                    <ul class="catalog-section__items">
+                        <li>
+                            <a href="#" class="catalog-section__link">Подраздел этого раздела с ещё более длинным названием</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                         <li>
-                            <a href="#" class="catalog-list__link">Подраздел</a>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
+                        </li>
+                        <li>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
+                        </li>
+                        <li>
+                            <a href="#" class="catalog-section__link">Подраздел</a>
                         </li>
                     </ul>
                 </div>

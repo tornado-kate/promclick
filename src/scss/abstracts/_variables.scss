@@ -1,3 +1,5 @@
+@use '../components/media' as *;
+
 :root {
     --fontInter: 'Inter', sans-serif;
     --fontInterDisplay: 'InterDisplay', sans-serif;
@@ -27,9 +29,13 @@
     --Gap-1x: 12px;
     --Gap-2x: 16px;
     --Gap-3x: 24px;
+    --Gap-4x: 40px;
     --transition-base: all 0.3s ease-out;
 
-
+    @include media(xl) {
+        --Gap-2x: 12px;
+        --Gap-4x: 24px;
+    }
 }
 
 $font-inter: var(--fontInter), sans-serif;

@@ -1,0 +1,33 @@
+<div class="form-modal">
+    <div class="form-modal__head">
+        <div class="form-modal__title">
+            <label class="form-modal__title-item">
+                <input type="radio" value="" name="title" checked />
+                Заявка на КП
+            </label>
+            <label class="form-modal__title-item">
+                <input type="radio" value="" name="title" />
+                или счет
+            </label>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="inn">ИНН</label>
+            <input type="text" id="inn" class="form-control" placeholder="00000000" />
+        </div>
+        <div class="form-group">
+            <label for="phone">Номер телефона Указать email</label>
+            <input type="tel" id="phone" class="form-control" placeholder="+7 900 000-00-00" />
+        </div>
+
+        <div class="form-modal__footer">
+            <button class="btn btn-primary btn-m" type="submit">Отправить заявку</button>
+            <label class="form-check form-check--agree">
+                <input type="checkbox" class="form-check__input" hidden="" value="" checked="">
+                <a href="#" target="_blank" class="form-check__link">Согласен</a> на обработку персональных данных
+            </label>
+        </div>
+    </form>
+</div>

@@ -4,14 +4,58 @@ import 'swiper/css/free-mode';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
-//import { Fancybox } from "@fancyapps/ui";
-//window.Fancybox = Fancybox;
-//import "@fancyapps/ui/dist/fancybox.css";
+import 'swiper/css/controller'
+import { Fancybox } from '@fancyapps/ui'
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
+
+window.Fancybox = Fancybox
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body
     const toggleMegaMenu = document.querySelector('.header__toggle-menu')
     const megaMenu = document.querySelector('.mega-menu')
+    const headerBtnSearch = document.querySelector('.header__btn-search')
+    const topSearch = document.querySelector('.top-search')
+    const topSearchClose = document.querySelector('.top-search__close')
+    const topSearchInput = document.querySelector('.form-search__input')
+    const topSearchBtn = document.querySelector('.form-search__btn')
+
+    document.querySelectorAll("[data-fancybox-ajax]").forEach(element => {
+        element.addEventListener("click", event => {
+            event.preventDefault()
+            console.log(element.getAttribute('href'))
+
+            Fancybox.show([{
+                src: element.getAttribute('href'),
+                type: 'ajax',
+                //preload: false, // отключает предварительную загрузку
+                //groupAttr: false,
+                //mainClass: 'popup',
+                //autoFocus: false,
+                //dragToClose: false,
+                //closeButton: false,
+                // Можно указать дополнительные опции, например, обработчики событий
+                on: {
+                    reveal: (fancybox, slide) => {
+                        console.log("Fancybox открылся")
+                    }
+                }
+            }])
+        })
+    })
+
+    topSearchInput.addEventListener('focus', () => {
+        topSearchBtn.classList.add('is-focused')
+    })
+
+    headerBtnSearch.addEventListener('click', () => {
+        topSearch.classList.add('is-active')
+    })
+
+    topSearchClose.addEventListener('click', () => {
+        topSearch.classList.remove('is-active')
+        topSearchBtn.classList.remove('is-focused')
+    })
 
     toggleMegaMenu.addEventListener('click', () => {
         toggleMegaMenu.classList.toggle('is-active')
@@ -92,23 +136,26 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 12,
     })
 
-    const catalogGallery = new Swiper(".catalog-gallery-thumbs", {
-        spaceBetween: 10,
-        slidesPerView: 4,
+    const catalogGalleryThumbs = new Swiper(".catalog-gallery-thumbs", {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
         freeMode: true,
-        watchSlidesProgress: true,
-    });
-    const catalogGalleryThumbs = new Swiper(".catalog-gallery", {
-        spaceBetween: 10,
+        //watchSlidesProgress: true,
+        slideToClickedSlide: true
+    })
+    const catalogGallery = new Swiper('.catalog-gallery', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        modules: [Thumbs],
         thumbs: {
-            swiper: catalogGallery,
+            swiper: catalogGalleryThumbs,
         },
     })
 
 
-    document.querySelectorAll('.catalog-list__items').forEach((list) => {
+    document.querySelectorAll('.catalog-section__items').forEach((list) => {
         const items = list.querySelectorAll('li')
-        const showMoreLink = list.querySelector('.catalog-list__show-more')
+        const showMoreLink = list.querySelector('.catalog-section__show-more')
 
         if (items.length > 3 && showMoreLink) {
             const totalCount = items.length
@@ -118,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Изначально скрываем все, начиная с 4-го
             for (let i = 3; i < totalCount; i++) {
-                if (!items[i].classList.contains('catalog-list__item-show-more')) {
+                if (!items[i].classList.contains('catalog-section__item-show-more')) {
                     items[i].style.display = 'none'
                 }
             }
@@ -139,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     // Снова скрываем все, кроме элементов с классом .catalog-list__item-show-more
                     for (let i = 3; i < totalCount; i++) {
-                        if (!items[i].classList.contains('catalog-list__item-show-more')) {
+                        if (!items[i].classList.contains('catalog-section__item-show-more')) {
                             items[i].style.display = 'none';
                         }
                     }
@@ -165,6 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('is-active')
 
             document.getElementById(target).classList.add('is-active')
-        });
-    });
+        })
+    })
 })
