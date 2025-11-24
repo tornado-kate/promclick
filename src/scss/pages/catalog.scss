@@ -9,6 +9,7 @@
 
     &__head {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--Gap-1x);
         margin-bottom: 56px;
     }
@@ -26,17 +27,17 @@
 .catalog-section {
     display: grid;
     grid-template: auto / repeat(4, 1fr);
-    gap: 64px var(--Gap-4x);
+    gap: var(--Gap-5x) var(--Gap-4x);
 
     &__top {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: var(--Gap-2x);
         color: var(--ColorsBlack);
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
-        line-height: 26px;
+        line-height: 130%;
         margin-bottom: 12px;
     }
 
@@ -47,7 +48,7 @@
     }
 
     &__item {
-        padding-right: 24px;
+        padding-right: var(--Gap-3x);
     }
 
     &__items {
@@ -66,6 +67,34 @@
 
     &__show-more {
         color: var(--ColorsBlue);
+    }
+
+    @include media(xl) {
+        &__img {
+            max-width: 56px;
+        }
+    }
+
+    @include media(lg) {
+        &__top {
+            font-size: 18px;
+        }
+
+        &__item {
+            padding-right: 0;
+        }
+
+        &__items {
+            font-size: 15px;
+        }
+
+        &__img {
+            max-width: 48px;
+        }
+    }
+
+    @include media(md) {
+        grid-template: auto / repeat(1, 1fr);
     }
 }
 

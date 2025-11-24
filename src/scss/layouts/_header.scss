@@ -87,6 +87,12 @@
             font-size: 18px;
         }
     }
+
+    @include media(lg) {
+        &__right {
+            display: none;
+        }
+    }
 }
 
 .mega-menu {

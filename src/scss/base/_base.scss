@@ -35,11 +35,15 @@ a {
     margin: 0 auto;
     max-width: 1404px;
     width: 100%;
-}
 
-@media (max-width: 1599px) {
-    .container {
+    @include media(xl) {
         padding: 0 18px;
+    }
+    @include media(lg) {
+        padding: 0 15px;
+    }
+    @include media(md) {
+        padding: 0 12px;
     }
 }
 
