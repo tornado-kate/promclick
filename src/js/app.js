@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.toggle('no-scroll')
     })
 
-    const menuItems = document.querySelectorAll('.navbar__item')
+    const menuItems = document.querySelectorAll('.mm-navbar__item')
     const contentItems = document.querySelectorAll('.mega-menu__item')
 
     if (menuItems.length > 0 && contentItems.length > 0) {

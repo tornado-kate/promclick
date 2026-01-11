@@ -11,14 +11,16 @@
     <div class="container">
         <div class="header__row">
             <div class="header__left">
-                <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+                <a href="#" class="header__logo"><img src="images/logo.svg" alt="logo" /></a>
                 <a href="#" class="btn btn-outline-secondary header__toggle-menu">Каталог<i class="svg-icon svg-close-menu"></i></a>
             </div>
             <div class="header__right">
-                <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
-                <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
+                <div class="header__contacts">
+                    <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
+                    <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
+                </div>
                 <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
-                <a href="#" class="btn btn-primary">Оставить заявку</a>
+                <a href="#" class="btn btn-primary header__callback">Оставить заявку</a>
             </div>
         </div>
     </div>
@@ -43,45 +45,45 @@
     <div class="container">
         <div class="mega-menu__row">
             <div class="mega-menu__left">
-                <ul class="navbar">
+                <ul class="mm-navbar">
                     <li>
-                        <a href="#" class="navbar__item" data-navbar="1">
+                        <a href="#" class="mm-navbar__item" data-navbar="1">
                             <img src="images/temp/navbar-1.png" alt="" />
                             Решетчатый настил
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="navbar__item" data-navbar="2">
+                        <a href="#" class="mm-navbar__item" data-navbar="2">
                             <img src="images/temp/navbar-2.png" alt="" />
                             Стеклопластик
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="navbar__item" data-navbar="3">
+                        <a href="#" class="mm-navbar__item" data-navbar="3">
                             <img src="images/temp/navbar-2.png" alt="" />
                             Электрика
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="navbar__item" data-navbar="4">
+                        <a href="#" class="mm-navbar__item" data-navbar="4">
                             <img src="images/temp/navbar-2.png" alt="" />
                             Инструмент
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="mega-menu__content">
+            <div class="mega-menu__right">
                 <div class="mega-menu__item" data-content="1">
                     <h2 class="mega-menu__title">Решетчатый настил</h2>
-                    <ul class="navbar-sub">
+                    <ul class="mm-navbar-sub">
                         <li>
-                            <a href="#" class="navbar-sub__item">Сварной настил</a>
+                            <a href="#" class="mm-navbar-sub__item">Сварной настил</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Прессованный настил</a>
+                            <a href="#" class="mm-navbar-sub__item">Прессованный настил</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Ступени</a>
+                            <a href="#" class="mm-navbar-sub__item">Ступени</a>
                         </li>
                     </ul>
                 </div>
@@ -89,7 +91,7 @@
                     <h2 class="mega-menu__title">Стеклопластик</h2>
                     <ul class="navbar-sub">
                         <li>
-                            <a href="#" class="navbar-sub__item">Стеклопластиковый настил</a>
+                            <a href="#" class="mm-navbar-sub__item">Стеклопластиковый настил</a>
                         </li>
                     </ul>
                 </div>
@@ -97,13 +99,13 @@
                     <h2 class="mega-menu__title">Электрика</h2>
                     <ul class="navbar-sub">
                         <li>
-                            <a href="#" class="navbar-sub__item">Электрика 1</a>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 1</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Электрика 2</a>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 2</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Электрика 3</a>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 3</a>
                         </li>
                     </ul>
                 </div>
@@ -111,13 +113,13 @@
                     <h2 class="mega-menu__title">Инструмент</h2>
                     <ul class="navbar-sub">
                         <li>
-                            <a href="#" class="navbar-sub__item">Инструмент 1</a>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 1</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Инструмент 2</a>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 2</a>
                         </li>
                         <li>
-                            <a href="#" class="navbar-sub__item">Инструмент 3</a>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 3</a>
                         </li>
                     </ul>
                 </div>
@@ -288,140 +290,140 @@
                     <div class="">
                         <div class="catalog-list">
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>
                                 <span class="catalog-list__desc">9460 ₽ за 1 м2</span>
                             </a>
                             <a href="#" class="catalog-list__item">
-                                <img src="images/temp/catalog-list.png" alt="" />
+                                <img src="images/temp/catalog-list.png" class="catalog-list__img" alt="" />
                                 <span class="catalog-list__status">В наличии</span>
                                 <span class="catalog-list__title">Сварной решетчатый настил SP 34x38 30x36100x1000</span>
                                 <span class="catalog-list__price">58 040 ₽</span>

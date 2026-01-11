@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../components/media' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 //@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 100; font-display: swap; src: url("InterDisplay-Thin.woff2") format("woff2"); }
@@ -11,9 +12,9 @@
 //@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 400; font-display: swap; src: url("InterDisplay-Italic.woff2") format("woff2"); }
 @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/InterDisplay-Medium.woff2") format("woff2"); }
 //@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 500; font-display: swap; src: url("InterDisplay-MediumItalic.woff2") format("woff2"); }
-//@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 600; font-display: swap; src: url("InterDisplay-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/InterDisplay-SemiBold.woff2") format("woff2"); }
 //@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 600; font-display: swap; src: url("InterDisplay-SemiBoldItalic.woff2") format("woff2"); }
-//@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 700; font-display: swap; src: url("InterDisplay-Bold.woff2") format("woff2"); }
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/InterDisplay-Bold.woff2") format("woff2"); }
 //@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 700; font-display: swap; src: url("InterDisplay-BoldItalic.woff2") format("woff2"); }
 //@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 800; font-display: swap; src: url("InterDisplay-ExtraBold.woff2") format("woff2"); }
 //@font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 800; font-display: swap; src: url("InterDisplay-ExtraBoldItalic.woff2") format("woff2"); }
@@ -38,19 +39,30 @@ h6,
 .h6 {
     font-family: $font-inter;
     font-style: normal;
+    color: var(--ColorsBlack);
 }
 
 h1 {
-    color: #242424;
     font-size: 64px;
     font-style: normal;
     font-weight: 600;
     line-height: 110%;
     letter-spacing: -0.32px;
+
+    @include media(xl) {
+        font-size: 54px;
+    }
+
+    @include media(lg) {
+        font-size: 44px;
+    }
+
+    @include media(md) {
+        font-size: 32px;
+    }
 }
 
 h2 {
-    color: var(--ColorsBlack);
     font-size: 56px;
     font-style: normal;
     font-weight: 600;

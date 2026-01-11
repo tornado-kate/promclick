@@ -1,17 +1,13 @@
 @use '../abstracts/variables' as *;
 @use '../components/media' as *;
 
-
-.main-catalog {
-    margin-top: 16px;
-}
 .catalog {
 
     &__head {
         display: flex;
         flex-wrap: wrap;
         gap: var(--Gap-1x);
-        margin-bottom: 56px;
+        margin-bottom: var(--Gap-5x);
     }
     &__count {
         color: #B9BBBD;
@@ -22,12 +18,25 @@
         line-height: 130%;
         padding-top: 10px;
     }
+
+    @include media(xl) {
+        &__count {
+            font-size: 16px;
+        }
+    }
+
+    @include media(md) {
+        &__count {
+            font-size: 14px;
+            padding-top: 0;
+        }
+    }
 }
 
 .catalog-section {
     display: grid;
     grid-template: auto / repeat(4, 1fr);
-    gap: var(--Gap-5x) var(--Gap-4x);
+    gap: var(--Gap-6x) var(--Gap-4x);
 
     &__top {
         display: flex;
@@ -101,7 +110,7 @@
 .catalog__subsection {
     display: flex;
     gap: 8px;
-    margin-bottom: 56px;
+    margin-bottom: var(--Gap-5x);
 
     &-item {
         display: flex;
@@ -116,18 +125,43 @@
         font-weight: 600;
         line-height: 130%;
     }
+
+    @include media(xl) {
+        img {
+            max-width: 160px;
+        }
+    }
+
+    @include media(lg) {
+        img {
+            max-width: 120px;
+        }
+    }
+
+    @include media(lg) {
+        overflow-x: auto;
+
+        &-title {
+            font-size: 14px;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    }
 }
 
 .catalog-filter {
     display: grid;
     grid-template: auto / 200px 1fr;
-    gap: 64px;
+    gap: var(--Gap-6x);
 
     &__items {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
+
     &__title {
         margin-bottom: 10px;
         color: var(--ColorsGray6);
@@ -136,16 +170,17 @@
         font-weight: 700;
         line-height: 130%;
     }
+
     .form-check {
         display: block;
         margin-bottom: 10px;
     }
 
-    &__param {
+    &__params {
         display: flex;
         align-items: center;
-        gap: 12px;
-        margin-bottom: 24px;
+        gap: var(--Gap-1x);
+        margin-bottom: var(--Gap-3x);
 
         &-item {
             display: flex;
@@ -189,6 +224,26 @@
             }
         }
     }
+
+    @include media(lg) {
+        grid-template: auto / 185px 1fr;
+
+        &__items {
+            gap: 24px;
+        }
+    }
+
+    @include media(md) {
+        grid-template: auto / 1fr;
+
+        &__items {
+            display: none;
+        }
+
+        &__params {
+            display: none; // TODO: ?
+        }
+    }
 }
 
 .filter-colors {
@@ -230,6 +285,10 @@
         &:hover:before {
             border-color: rgba(0, 116, 236, 0.50);
         }
+    }
+
+    @include media(lg) {
+        gap: 12px;
     }
 }
 
@@ -294,7 +353,7 @@
         margin-bottom: 24px;
     }
 
-    &__rows {
+    &__row {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
@@ -311,14 +370,27 @@
         font-weight: 500;
         line-height: 130%;
     }
+
+    @include media(lg) {
+        &__item {
+            font-size: 14px;
+        }
+    }
+
+    @include media(md) {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .catalog-list {
     display: grid;
-    gap: 56px var(--Gap-2x);
+    gap: var(--Gap-5x) var(--Gap-2x);
     grid-template: auto / repeat(4, 1fr);
     font-family: $font-inter;
-    margin-bottom: 56px;
+    margin-bottom: var(--Gap-5x);
 
     &__item {
         align-items: flex-start;
@@ -328,6 +400,7 @@
 
     &__img {
         border-radius: 20px;
+        max-width: 100%;
     }
 
     &__wrap {
@@ -367,6 +440,40 @@
         font-weight: 500;
         line-height: 20px;
         letter-spacing: -0.45px;
+    }
+
+    @include media(xl) {
+        &__price {
+            font-size: 20px;
+        }
+
+        &__desc {
+            font-size: 14px;
+        }
+
+        &__img {
+            border-radius: 16px;
+        }
+    }
+
+    @include media(lg) {
+        grid-template: auto / 1fr 1fr 1fr;
+
+        &__title {
+            margin-bottom: 6px;
+        }
+    }
+
+    @include media(md) {
+        grid-template: auto / 1fr 1fr;
+
+        &__desc {
+            font-size: 13px;
+        }
+
+        &__status {
+            margin-bottom: 4px;
+        }
     }
 }
 
@@ -448,6 +555,7 @@
             margin-bottom: 0;
         }
     }
+
     &__actions {
         position: sticky;
         top: 115px;
@@ -457,6 +565,7 @@
         align-items: flex-start;
         gap: var(--Gap-2x);
     }
+
     &__price {
         font-size: 40px;
         font-style: normal;
@@ -464,6 +573,7 @@
         line-height: normal;
         letter-spacing: -1.2px;
     }
+
     &__price-desc {
         padding: 20px 20px 24px 20px;
         border-radius: 12px;
@@ -474,12 +584,14 @@
         font-weight: 400;
         line-height: 20px;
     }
+
     &__cert-logo {
         display: flex;
         gap: 12px;
         align-items: center;
         margin-bottom: 28px;
     }
+
     &__country {
         display: flex;
         align-items: center;
@@ -490,24 +602,28 @@
         font-weight: 400;
         line-height: normal;
     }
+
     &__parameters {
         border-bottom: 1px solid #E0E0E0;
         margin-bottom: 16px;
 
         &-item {
-            height: 36px;
+            min-height: 36px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid #E0E0E0;
         }
+
         &-name {
             color: var(--ColorsGray1);
             font-size: 18px;
         }
-        &__val {
+
+        &-val {
             color: var(--ColorsBlack);
             font-size: 18px;
+            text-align: right;
         }
     }
     &__colors {
@@ -553,13 +669,15 @@
             min-height: 93px;
             padding: 24px 40px 24px 32px;
         }
+
         &-name {
             display: flex;
             color: var(--ColorsBlack);
             font-size: 22px;
             line-height: 130%;
-            margin-bottom: 24px;
+            margin-bottom: var(--Gap-3x);
         }
+
         &-pdf {
             color: var(--ColorsRed);
             font-size: 15px;
@@ -577,10 +695,11 @@
         }
     }
     &__sect {
-        margin-bottom: 64px;
+        margin-bottom: var(--Gap-6x);
 
         img {
             border-radius: 12px;
+            max-width: 100%;
         }
         &-title {
             color: var(--ColorsBlack);
@@ -610,7 +729,7 @@
             font-size: 24px;
         }
         &__sect-text {
-            font-size: 18px;
+            font-size: 16px;
         }
         &__spec-value {
             font-size: 18px;
@@ -618,10 +737,66 @@
         &__price {
             font-size: 32px;
         }
+        &__cert {
+
+            &-item {
+                padding: 20px 30px 20px 24px;
+                border-radius: 20px;
+            }
+
+            &-name {
+                font-size: 18px;
+            }
+        }
     }
+
+    @include media(lg) {
+        &__sect-text {
+            font-size: 14px;
+        }
+
+        &__parameters {
+            &-name,
+            &-val {
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+
+        &__sect-title {
+            font-size: 28px;
+        }
+    }
+
     @include media(md) {
+        &__cert {
+            &-item {
+                border-radius: 16px;
+                padding: 16px 20px;
+            }
+
+            &-pdf {
+                font-size: 14px;
+            }
+
+            &-name {
+                font-size: 16px;
+            }
+        }
+
         &__title {
             font-size: 18px;
+        }
+
+        &__sect-title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        &__parameters {
+            &-name {
+                min-width: 142px;
+            }
         }
     }
 }

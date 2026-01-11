@@ -2,7 +2,8 @@
 @use '../components/media' as *;
 
 .footer {
-    margin-top: 200px;
+    margin-top: 150px;
+    padding-top: 50px;
     margin-bottom: 120px;
 
     &__row-nav {
@@ -11,6 +12,7 @@
         margin-bottom: 44px;
         flex-wrap: wrap;
     }
+
     &-nav {
         width: 258px;
 
@@ -19,6 +21,7 @@
             flex-direction: column;
             gap: 8px;
         }
+
         &__link {
             color: var(--ColorsGray1);
             font-family: $font-interDisplay;
@@ -28,14 +31,56 @@
             line-height: 130%;
         }
     }
+
     &__bottom {
         display: grid;
-        gap: var(--Gap-1x);
+        gap: var(--Gap-2x);
         font-family: $font-interDisplay;
         color: var(--ColorsGray1);
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
+    }
+
+    @include media(xl) {
+        margin-top: 100px;
+        padding-top: var(--Gap-4x);
+        margin-bottom: 60px;
+
+        &__row-nav {
+            margin-bottom: var(--Gap-4x);
+        }
+
+        &-nav {
+            &__link {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include media(lg) {
+        margin-top: 80px;
+        margin-bottom: 40px;
+
+        &-nav {
+            width: 230px;
+
+            &__link {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include media(md) {
+        margin-top: 60px;
+        margin-bottom: 32px;
+
+        &-nav {
+
+            &__menu {
+                gap: 4px;
+            }
+        }
     }
 }

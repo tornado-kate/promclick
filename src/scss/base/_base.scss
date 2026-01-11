@@ -48,7 +48,7 @@ a {
 }
 
 .main-inner {
-    margin-top: 56px;
+    margin-top: var(--Gap-5x);
 }
 
 .svg-icon {
@@ -166,6 +166,22 @@ a {
         background: linear-gradient(0deg, #F5F5F5 0%, #F5F5F5 100%), #0074EC;
     }
 
+    @include media(xl) {
+        font-size: 16px;
+        padding: 12px 32px;
+        height: 44px;
+    }
+
+    @include media(lg) {
+        padding: 10px 24px;
+        height: 40px;
+    }
+
+    @include media(md) {
+        padding: 6px 20px;
+        font-size: 14px;
+        height: 38px;
+    }
 }
 
 .btn-more {
@@ -187,6 +203,21 @@ a {
     font-size: 18px;
     font-weight: 500;
     line-height: 120%;
+
+    @include media(xl) {
+        padding: 14px 14px 16px 18px;
+        height: 56px;
+        font-size: 16px;
+    }
+
+    @include media(lg) {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    @include media(md) {
+        height: 42px;
+    }
 }
 
 .breadcrumb {
@@ -459,10 +490,9 @@ a {
 
 .nav-tabs {
     display: flex;
-    padding: 12px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: var(--Gap-5x);
 
     &__item {
         display: flex;
@@ -498,6 +528,22 @@ a {
             border-top: 2px solid var(--ColorsGray4);
             border-left: 2px solid var(--ColorsGray4);
             background: var(--ColorsGray10);
+        }
+    }
+
+    @include media(xl) {
+        &__item {
+            height: 48px;
+            padding: 6px 24px;
+            font-size: 16px;
+        }
+    }
+
+    @include media(md) {
+        &__item {
+            height: 48px;
+            padding: 6px 12px;
+            font-size: 14px;
         }
     }
 }

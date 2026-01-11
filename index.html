@@ -1,315 +1,317 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="dist/css/app.css?v=1" />
-    </head>
-    <body>
-        <header class="header">
-            <div class="container">
-                <div class="header__row">
-                    <div class="header__left">
-                        <a href="#"><img src="images/logo.svg" alt="logo" /></a>
-                        <a href="#" class="btn btn-outline-secondary header__toggle-menu">Каталог<i class="svg-icon svg-close-menu"></i></a>
-                    </div>
-                    <div class="header__right">
-                        <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
-                        <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
-                        <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
-                        <a href="#" class="btn btn-primary">Оставить заявку</a>
-                    </div>
-                </div>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/app.css?v=1" />
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__left">
+                <a href="#" class="header__logo"><img src="images/logo.svg" alt="logo" /></a>
+                <a href="#" class="btn btn-outline-secondary header__toggle-menu">Каталог<i class="svg-icon svg-close-menu"></i></a>
             </div>
-        </header>
-        <div class="top-search">
-            <div class="container">
-                <div class="top-search__wrap">
-                    <form class="form-search">
-                        <div class="form-search__wrap">
-                            <div class="form-group">
-                                <label for="input-search"></label>
-                                <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
-                            </div>
-                            <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
-                        </div>
-                    </form>
-                    <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+            <div class="header__right">
+                <div class="header__contacts">
+                    <a href="tel:88006004233" class="header__phone">8 800 600 42 33</a>
+                    <a href="mailto:sale@promclick.ru" class="header__mail">sale@promclick.ru</a>
+                </div>
+                <button class="header__btn-search"><i class="svg-icon svg-search"></i></button>
+                <a href="#" class="btn btn-primary header__callback">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="top-search">
+    <div class="container">
+        <div class="top-search__wrap">
+            <form class="form-search">
+                <div class="form-search__wrap">
+                    <div class="form-group">
+                        <label for="input-search"></label>
+                        <input id="input-search" class="form-search__input" type="text" name="search" placeholder="что ищем" autocomplete="off" />
+                    </div>
+                    <button class="btn btn-primary form-search__btn" type="submit">Найти</button>
+                </div>
+            </form>
+            <button class="top-search__close"><i class="svg-icon svg-close-search"></i></button>
+        </div>
+    </div>
+</div>
+<div class="mega-menu">
+    <div class="container">
+        <div class="mega-menu__row">
+            <div class="mega-menu__left">
+                <ul class="mm-navbar">
+                    <li>
+                        <a href="#" class="mm-navbar__item" data-navbar="1">
+                            <img src="images/temp/navbar-1.png" alt="" />
+                            Решетчатый настил
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mm-navbar__item" data-navbar="2">
+                            <img src="images/temp/navbar-2.png" alt="" />
+                            Стеклопластик
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mm-navbar__item" data-navbar="3">
+                            <img src="images/temp/navbar-2.png" alt="" />
+                            Электрика
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mm-navbar__item" data-navbar="4">
+                            <img src="images/temp/navbar-2.png" alt="" />
+                            Инструмент
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mega-menu__right">
+                <div class="mega-menu__item" data-content="1">
+                    <h2 class="mega-menu__title">Решетчатый настил</h2>
+                    <ul class="mm-navbar-sub">
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Сварной настил</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Прессованный настил</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Ступени</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mega-menu__item" data-content="2">
+                    <h2 class="mega-menu__title">Стеклопластик</h2>
+                    <ul class="navbar-sub">
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Стеклопластиковый настил</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mega-menu__item" data-content="3">
+                    <h2 class="mega-menu__title">Электрика</h2>
+                    <ul class="navbar-sub">
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Электрика 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mega-menu__item" data-content="4">
+                    <h2 class="mega-menu__title">Инструмент</h2>
+                    <ul class="navbar-sub">
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mm-navbar-sub__item">Инструмент 3</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="mega-menu">
-            <div class="container">
-                <div class="mega-menu__row">
-                    <div class="mega-menu__left">
-                        <ul class="navbar">
-                            <li>
-                                <a href="#" class="navbar__item" data-navbar="1">
-                                    <img src="images/temp/navbar-1.png" alt="" />
-                                    Решетчатый настил
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__item" data-navbar="2">
-                                    <img src="images/temp/navbar-2.png" alt="" />
-                                    Стеклопластик
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__item" data-navbar="3">
-                                    <img src="images/temp/navbar-2.png" alt="" />
-                                    Электрика
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__item" data-navbar="4">
-                                    <img src="images/temp/navbar-2.png" alt="" />
-                                    Инструмент
-                                </a>
-                            </li>
-                        </ul>
+    </div>
+</div>
+<main>
+    <section class="sect-main-slider">
+        <div class="container">
+            <div class="swiper main-slider">
+                <div class="swiper-wrapper">
+                    <div class="main-slider__item main-slider__item--is-white swiper-slide">
+                        <h2 class="main-slider__title">Онлайн-строймаркет</h2>
+                        <div class="main-slider__text">
+                            Конструкции из металла и стеклопластика
+                            <br/>для промышленного и гражданского строительства
+                            <br/>с доставкой по России и СНГ.
+                        </div>
+                        <a href="#" class="btn btn-outline-secondary2 main-slider__btn">О компании <span class="svg-icon svg-arrow-btn-secondary"></span></a>
                     </div>
-                    <div class="mega-menu__content">
-                        <div class="mega-menu__item" data-content="1">
-                            <h2 class="mega-menu__title">Решетчатый настил</h2>
-                            <ul class="navbar-sub">
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Сварной настил</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Прессованный настил</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Ступени</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mega-menu__item" data-content="2">
-                            <h2 class="mega-menu__title">Стеклопластик</h2>
-                            <ul class="navbar-sub">
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Стеклопластиковый настил</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mega-menu__item" data-content="3">
-                            <h2 class="mega-menu__title">Электрика</h2>
-                            <ul class="navbar-sub">
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Электрика 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Электрика 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Электрика 3</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mega-menu__item" data-content="4">
-                            <h2 class="mega-menu__title">Инструмент</h2>
-                            <ul class="navbar-sub">
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Инструмент 1</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Инструмент 2</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="navbar-sub__item">Инструмент 3</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="main-slider__item main-slider__item--is-text swiper-slide">
+                        <h2 class="main-slider__title">Стальной настил</h2>
+                        <img src="images/temp/main-slider-1.png" alt="" />
+                        <a href="#" class="btn btn-outline-secondary3 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
+                    </div>
+                    <div class="main-slider__item main-slider__item--is-text swiper-slide">
+                        <h2 class="main-slider__title">Стальной настил</h2>
+                        <img src="images/temp/main-slider-1.png" alt="" />
+                        <a href="#" class="btn btn-outline-secondary2 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-        <main>
-            <section class="sect-main-slider">
-                <div class="container">
-                    <div class="swiper main-slider">
-                        <div class="swiper-wrapper">
-                            <div class="main-slider__item main-slider__item--is-white swiper-slide">
-                                <h2 class="main-slider__title">Онлайн-строймаркет</h2>
-                                <div class="main-slider__text">
-                                    Конструкции из металла и стеклопластика
-                                    <br/>для промышленного и гражданского строительства
-                                    <br/>с доставкой по России и СНГ.
-                                </div>
-                                <a href="#" class="btn btn-outline-secondary2 main-slider__btn">О компании <span class="svg-icon svg-arrow-btn-secondary"></span></a>
-                            </div>
-                            <div class="main-slider__item main-slider__item--is-text swiper-slide">
-                                <h2 class="main-slider__title">Стальной настил</h2>
-                                <img src="images/temp/main-slider-1.png" alt="" />
-                                <a href="#" class="btn btn-outline-secondary3 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
-                            </div>
-                            <div class="main-slider__item main-slider__item--is-text swiper-slide">
-                                <h2 class="main-slider__title">Стальной настил</h2>
-                                <img src="images/temp/main-slider-1.png" alt="" />
-                                <a href="#" class="btn btn-outline-secondary2 main-slider__btn">Подробнее <span class="svg-icon svg-arrow-btn-secondary"></span></a>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-            <div class="container">
-                <section class="news-promo">
-                    <div class="news-promo__head">
-                        <h2 class="news-promo__title">Новости</h2>
-                        <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
-                    </div>
-
-                    <div class="swiper main-news-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Снижение цен на композитный настил со склада</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Напольные металлические решетки — выбор профессионалов</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Выбираем стеклопластик</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="news-promo">
-                    <div class="news-promo__head">
-                        <h2 class="news-promo__title">Статьи</h2>
-                        <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
-                    </div>
-
-                    <div class="swiper main-promo-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Снижение цен на композитный настил со склада</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Напольные металлические решетки — выбор профессионалов</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="news-promo-card">
-                                    <div class="news-promo-card__top">
-                                        <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
-                                        <span class="news-promo-card__title">Выбираем стеклопластик</span>
-                                    </div>
-                                    <span class="news-promo-card__date">24 янв</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    </section>
+    <div class="container">
+        <section class="news-promo">
+            <div class="news-promo__head">
+                <h2 class="news-promo__title">Новости</h2>
+                <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
             </div>
-            <div class="form-callback">
-                <div class="container">
-                    <form class="form-callback__form">
-                        <h3 class="form-callback__title">Перезвоним и расскажем больше о продукции</h3>
-                        <input type="tel" class="form-callback__input" name="" placeholder="+7 900 000-00-00" value="" />
 
-                        <label class="form-check form-check--agree">
-                            <input type="checkbox" class="form-check__input" hidden="" value="" checked>
-                            <a href="#" target="_blank" class="form-check__link">Согласен</a> на обработку персональных данных
-                        </label>
-
-                        <button class="btn btn-primary btn-m" type="submit" disabled>Оставить номер</button>
-                    </form>
+            <div class="swiper main-news-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Снижение цен на композитный настил со склада</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Напольные металлические решетки — выбор профессионалов</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Выбираем стеклопластик</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__row-nav">
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__menu">
-                            <li><a href="#" class="footer-nav__link">О компании</a></li>
-                            <li><a href="#" class="footer-nav__link">Доставка</a></li>
-                            <li><a href="#" class="footer-nav__link">Производство</a></li>
-                            <li><a href="#" class="footer-nav__link">Поставщикам</a></li>
-                            <li><a href="#" class="footer-nav__link">Новости</a></li>
-                            <li><a href="#" class="footer-nav__link">Статьи</a></li>
-                            <li><a href="#" class="footer-nav__link">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__menu">
-                            <li><a href="#" class="footer-nav__link">Металлоконструкции</a></li>
-                            <li><a href="#" class="footer-nav__link">Лестницы</a></li>
-                            <li><a href="#" class="footer-nav__link">Ограждения</a></li>
-                            <li><a href="#" class="footer-nav__link">Площадки обслуживания</a></li>
-                            <li><a href="#" class="footer-nav__link">Металлообработка</a></li>
-                            <li><a href="#" class="footer-nav__link">Сварочные работы</a></li>
-                            <li><a href="#" class="footer-nav__link">Токарная обработка</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__menu">
-                            <li><a href="#" class="footer-nav__link">Решетчатый настил</a></li>
-                            <li><a href="#" class="footer-nav__link">Сварной настил</a></li>
-                            <li><a href="#" class="footer-nav__link">Прессованный настил</a></li>
-                            <li><a href="#" class="footer-nav__link">Ступени</a></li>
-                            <li><a href="#" class="footer-nav__link">Стеклопластик</a></li>
-                            <li><a href="#" class="footer-nav__link">Стеклопластиковый настил</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__text">Настилы из металла и стеклопластика с доставкой по России и СНГ — sale@promclick.ru, 8 800 600 42 33.
-                        <br/>Сайт информационный, размещённые предложения не являются публичной офертой. </div>
-                    <div class="footer__copyright">&copy; 2025 «Промклик» </div>
+        </section>
+        <section class="news-promo">
+            <div class="news-promo__head">
+                <h2 class="news-promo__title">Статьи</h2>
+                <a href="#" class="news-promo__link">Все записи <i class="svg-icon svg-right"></i></a>
+            </div>
+
+            <div class="swiper main-promo-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Снижение цен на композитный настил со склада</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Напольные металлические решетки — выбор профессионалов</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Запускаем усиленный стеклопластиковый решетчатый настил</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="news-promo-card">
+                            <div class="news-promo-card__top">
+                                <img src="images/temp/news-promo-card-352x240.jpg" class="news-promo-card__img" alt="" />
+                                <span class="news-promo-card__title">Выбираем стеклопластик</span>
+                            </div>
+                            <span class="news-promo-card__date">24 янв</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+    </div>
+    <div class="form-callback">
+        <div class="container">
+            <form class="form-callback__form">
+                <h3 class="form-callback__title">Перезвоним и расскажем больше о продукции</h3>
+                <input type="tel" class="form-callback__input" name="" placeholder="+7 900 000-00-00" value="" />
 
-        <script src="dist/js/app.js"></script>
-    </body>
+                <label class="form-check form-check--agree">
+                    <input type="checkbox" class="form-check__input" hidden="" value="" checked>
+                    <a href="#" target="_blank" class="form-check__link">Согласен</a> на обработку персональных данных
+                </label>
+
+                <button class="btn btn-primary btn-m" type="submit" disabled>Оставить номер</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__row-nav">
+            <nav class="footer-nav">
+                <ul class="footer-nav__menu">
+                    <li><a href="#" class="footer-nav__link">О компании</a></li>
+                    <li><a href="#" class="footer-nav__link">Доставка</a></li>
+                    <li><a href="#" class="footer-nav__link">Производство</a></li>
+                    <li><a href="#" class="footer-nav__link">Поставщикам</a></li>
+                    <li><a href="#" class="footer-nav__link">Новости</a></li>
+                    <li><a href="#" class="footer-nav__link">Статьи</a></li>
+                    <li><a href="#" class="footer-nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav">
+                <ul class="footer-nav__menu">
+                    <li><a href="#" class="footer-nav__link">Металлоконструкции</a></li>
+                    <li><a href="#" class="footer-nav__link">Лестницы</a></li>
+                    <li><a href="#" class="footer-nav__link">Ограждения</a></li>
+                    <li><a href="#" class="footer-nav__link">Площадки обслуживания</a></li>
+                    <li><a href="#" class="footer-nav__link">Металлообработка</a></li>
+                    <li><a href="#" class="footer-nav__link">Сварочные работы</a></li>
+                    <li><a href="#" class="footer-nav__link">Токарная обработка</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav">
+                <ul class="footer-nav__menu">
+                    <li><a href="#" class="footer-nav__link">Решетчатый настил</a></li>
+                    <li><a href="#" class="footer-nav__link">Сварной настил</a></li>
+                    <li><a href="#" class="footer-nav__link">Прессованный настил</a></li>
+                    <li><a href="#" class="footer-nav__link">Ступени</a></li>
+                    <li><a href="#" class="footer-nav__link">Стеклопластик</a></li>
+                    <li><a href="#" class="footer-nav__link">Стеклопластиковый настил</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__text">Настилы из металла и стеклопластика с доставкой по России и СНГ — sale@promclick.ru, 8 800 600 42 33.
+                <br/>Сайт информационный, размещённые предложения не являются публичной офертой. </div>
+            <div class="footer__copyright">&copy; 2025 «Промклик» </div>
+        </div>
+    </div>
+</footer>
+
+<script src="dist/js/app.js"></script>
+</body>
 </html>

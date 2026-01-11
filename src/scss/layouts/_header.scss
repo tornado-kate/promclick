@@ -10,6 +10,12 @@
     top: 0;
     z-index: 100;
 
+    &__logo {
+        img {
+            display: block;
+        }
+    }
+
     &__row {
         display: flex;
         align-items: center;
@@ -23,6 +29,9 @@
     }
 
     &__toggle-menu {
+        font-family: $font-interDisplay;
+        font-size: 20px;
+        font-weight: 700;
         display: flex;
         align-items: center;
         //gap: 16px;
@@ -47,7 +56,13 @@
 
     &__right {
         display: flex;
-        gap: 40px;
+        gap: var(--Gap-4x);
+        align-items: center;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: var(--Gap-4x);
         align-items: center;
     }
 
@@ -82,14 +97,90 @@
         }
     }
     @include media(xl) {
+        &__toggle-menu {
+            font-size: 16px;
+            padding: 12px 24px;
+
+            &.is-active {
+                .svg-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
         &__phone,
         &__mail {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 
     @include media(lg) {
+        &__left {
+            gap: 24px;
+        }
+
+        &__logo {
+            img {
+                max-width: 120px;
+            }
+        }
+
+        &__contacts {
+            flex-direction: column;
+            gap: 0;
+            align-items: flex-start;
+        }
+    }
+
+    @include media(md) {
+        padding: 12px 0;
+
+        &__row {
+            gap: 8px;
+            flex-direction: column;
+        }
+
+        &__contacts {
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        &__callback {
+            display: none;
+        }
+
+        &__left {
+            justify-content: space-between;
+            width: 100%;
+            gap: 16px;
+        }
+
         &__right {
+            width: 100%;
+        }
+
+        &__phone,
+        &__mail {
+            font-size: 14px;
+        }
+
+        &__toggle-menu {
+            font-size: 14px;
+        }
+
+        &__toggle-menu {
+
+            &.is-active {
+                .svg-icon {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        &__btn-search {
             display: none;
         }
     }
@@ -114,14 +205,17 @@
         overflow-x: hidden;
         overflow-y: auto;
     }
+
     &__left {
         margin-top: 72px;
     }
+
     &__row {
         display: flex;
         gap: 32px;
-        margin-top: 40px;
+        margin-top: var(--Gap-4x);
     }
+
     &__title {
         color: var(--ColorsBlack);
         font-family: $font-interDisplay;
@@ -129,15 +223,39 @@
         font-style: normal;
         font-weight: 700;
         line-height: 120%;
+        margin-bottom: 24px;
     }
+
     @include media(xl) {
+        top: 88px;
+
         &__title {
-            font-size: 36px;
+            font-size: 32px;
+        }
+
+        &__left {
+            margin-top: 60px;
+        }
+    }
+
+    @include media(lg) {
+        top: 84px;
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__left {
+            margin-top: 48px;
+        }
+
+        &__row {
+            gap: 24px;
         }
     }
 }
 
-.navbar {
+.mm-navbar {
     width: 348px;
 
     &__item {
@@ -159,10 +277,12 @@
         img {
             border-radius: 12px;
         }
+
         &.is-active,
         &:hover {
             background-color: var(--ColorsGray8);
         }
+
         &:before {
             position: absolute;
             right: 12px;
@@ -173,9 +293,31 @@
             height: 24px;
         }
     }
+
+    @include media(xl) {
+        &__item {
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    @include media(lg) {
+        width: 260px;
+
+        &__item {
+            font-size: 16px;
+        }
+    }
+
+    @include media(md) {
+
+    }
 }
 
-.navbar-sub {
+.mm-navbar-sub {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -187,9 +329,25 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        line-height: 120%; /* 21.6px */
-        min-height: 44px;
-        padding: 2px;
+        line-height: 120%;
+        padding: 11px 0;
+    }
+
+    @include media(xl) {
+        &__item {
+            font-size: 16px;
+            padding: 8px 0;
+        }
+    }
+
+    @include media(lg) {
+        &__item {
+            font-size: 14px;
+        }
+    }
+
+    @include media(md) {
+
     }
 }
 
@@ -221,10 +379,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 40px;
+        gap: var(--Gap-4x);
     }
     &__close {
         cursor: pointer;
+    }
+
+    @include media(xl) {
+        height: 80px;
+        padding: 18px 0 16px 0;
     }
 }
 
@@ -252,7 +415,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        gap: 40px;
+        gap: var(--Gap-4x);
     }
 
     &__input {
@@ -272,6 +435,12 @@
         &:focus-visible {
             border: none;
             outline: none;
+        }
+    }
+
+    @include media(xl) {
+        &__input {
+            font-size: 26px;
         }
     }
 }
