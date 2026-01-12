@@ -154,15 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     })
 
-    filterOpenBtn.addEventListener('click', () => {
-        document.querySelector('.catalog-filter__items').classList.toggle('is-active')
-        body.classList.toggle('body-is-hidden')
-    })
+    if (filterOpenBtn) {
+        filterOpenBtn.addEventListener('click', () => {
+            document.querySelector('.catalog-filter__items').classList.toggle('is-active')
+            body.classList.toggle('body-is-hidden')
+        })
 
-    filterCloseBtn.addEventListener('click', () => {
-        document.querySelector('.catalog-filter__items').classList.remove('is-active')
-        body.classList.remove('body-is-hidden')
-    })
+        filterCloseBtn.addEventListener('click', () => {
+            document.querySelector('.catalog-filter__items').classList.remove('is-active')
+            body.classList.remove('body-is-hidden')
+        })
+    }
 
     document.querySelectorAll('.catalog-section__items').forEach((list) => {
         const items = list.querySelectorAll('li')
