@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const topSearchClose = document.querySelector('.top-search__close')
     const topSearchInput = document.querySelector('.form-search__input')
     const topSearchBtn = document.querySelector('.form-search__btn')
+    const filterOpenBtn = document.querySelector('.catalog-filter__btn-open')
+    const filterCloseBtn = document.querySelector('.catalog-filter__mobile-close')
 
     document.querySelectorAll("[data-fancybox-ajax]").forEach(element => {
         element.addEventListener("click", event => {
@@ -152,6 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     })
 
+    filterOpenBtn.addEventListener('click', () => {
+        document.querySelector('.catalog-filter__items').classList.toggle('is-active')
+        body.classList.toggle('body-is-hidden')
+    })
+
+    filterCloseBtn.addEventListener('click', () => {
+        document.querySelector('.catalog-filter__items').classList.remove('is-active')
+        body.classList.remove('body-is-hidden')
+    })
 
     document.querySelectorAll('.catalog-section__items').forEach((list) => {
         const items = list.querySelectorAll('li')
