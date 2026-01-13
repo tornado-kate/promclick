@@ -6,7 +6,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
 import 'swiper/css/controller'
 import { Fancybox } from '@fancyapps/ui'
-import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import '@fancyapps/ui/dist/fancybox/fancybox.css'
+import IMask from 'imask'
 
 window.Fancybox = Fancybox
 
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const topSearchBtn = document.querySelector('.form-search__btn')
     const filterOpenBtn = document.querySelector('.catalog-filter__btn-open')
     const filterCloseBtn = document.querySelector('.catalog-filter__mobile-close')
+
+    initPhoneMask('[data-field=phone]');
 
     document.querySelectorAll("[data-fancybox-ajax]").forEach(element => {
         element.addEventListener("click", event => {
@@ -227,4 +230,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(target).classList.add('is-active')
         })
     })
+
+    let masks
+    function initPhoneMask(el) {
+        const phones = document.querySelectorAll(el)
+
+        phones.forEach(phone => {
+            return masks = IMask(phone, {
+                mask: '+7 000 000-00-00',
+                prepare: (val, masked) => !masked.value && val === '8' ? "" : val
+            })
+        })
+    }
 })

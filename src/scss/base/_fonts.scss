@@ -69,4 +69,16 @@ h2 {
     line-height: normal;
     letter-spacing: -0.28px;
     margin-bottom: 36px;
+
+    @include media(xl) {
+        font-size: 46px;
+    }
+
+    @include media(lg) {
+        font-size: 36px;
+    }
+
+    @include media(md) {
+        font-size: 26px;
+    }
 }

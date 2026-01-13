@@ -105,9 +105,8 @@ a {
     border-radius: 8px;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 120%;
-    height: 52px;
     cursor: pointer;
 
     &-primary {
@@ -131,24 +130,26 @@ a {
         display: flex;
         align-items: center;
         gap: 4px;
+        font-weight: 600;
+        font-size: 20px;
         border-radius: 16px;
         color: var(--ColorsBlack);
         border: 2px solid rgba(228, 228, 228, 0.60);
         background: transparent;
         padding: 8px 24px 10px 24px;
-        height: 71px;
     }
 
     &-outline-secondary3 {
         display: flex;
         align-items: center;
         gap: 4px;
+        font-weight: 600;
+        font-size: 20px;
         border-radius: 16px;
         color: #ffffff;
         background: transparent;
         padding: 8px 24px 10px 24px;
         box-shadow: inset 0 0 0 2px #ffffff;
-        height: 71px;
 
         .svg-arrow-btn-secondary {
             background-color: #ffffff;
@@ -157,7 +158,6 @@ a {
 
     &.btn-m {
         font-size: 20px;
-        font-weight: 600;
     }
 
     &:disabled {
@@ -169,18 +169,19 @@ a {
     @include media(xl) {
         font-size: 16px;
         padding: 12px 32px;
-        height: 44px;
+
+        &-outline-secondary2 {
+            padding: 16px 32px;
+        }
     }
 
     @include media(lg) {
         padding: 10px 24px;
-        height: 40px;
     }
 
     @include media(md) {
         padding: 6px 20px;
         font-size: 14px;
-        height: 38px;
     }
 }
 
@@ -289,7 +290,9 @@ a {
         width: 100%;
         overflow: visible;
     }
+
     &.swiper-horizontal {
+
         & > .swiper-pagination-bullets {
             bottom: -70px;
 
@@ -304,10 +307,13 @@ a {
             background-color: var(--ColorsGray7);
 
             &.swiper-pagination-bullet-active {
-
                 background-color: var(--ColorsBlue2);
             }
         }
+    }
+
+    &__inner {
+        padding: 60px 45px 0 72px;
     }
 
     &__item {
@@ -315,35 +321,39 @@ a {
 
         &--is-white {
             border: 2px solid rgba(228, 228, 228, 0.60);
-            padding: 60px 45px 40px 72px;
 
             .main-slider__title {
                 position: relative;
                 color: var(--ColorsBlack);
             }
         }
+
         &--is-text {
-            .main-slider__title {
+
+            .main-slider__inner {
                 position: absolute;
-                top: 60px;
-                left: 72px;
+                top: 0;
+                left: 0;
             }
         }
+
         &.swiper-slide {
             height: auto;
             //width: 20%;
             transition: transform 0.3s ease;
 
             &:not(.swiper-slide-active) {
-                transform: scale(0.8);
+                transform: scale(0.9);
             }
         }
+
         &.swiper-slide-active {
             width: 100%;
             transform: scale(1);
         }
 
     }
+
     &__title {
         color: white;
         font-size: 88px;
@@ -353,6 +363,7 @@ a {
         letter-spacing: -0.88px;
         margin-bottom: 45px;
     }
+
     &__text {
         color: var(--ColorsBlack);
         font-size: 32px;
@@ -361,28 +372,124 @@ a {
         line-height: 130%;
         max-width: 60%;
     }
+
     &__img {
         border-radius: 40px;
     }
+
     &__btn {
         position: absolute;
         bottom: 40px;
         right: 45px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    @include media(xl) {
+        margin-bottom: 100px;
+
+        &__title {
+            font-size: 68px;
+            margin-bottom: 32px;
+        }
+
+        &__text {
+            font-size: 24px;
+        }
+
+        &__inner {
+            padding: 32px;
+        }
+
+        &__item {
+            border-radius: 36px;
+
+            &--is-text {
+                img {
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &.swiper-horizontal {
+
+            & > .swiper-pagination-bullets {
+                bottom: -50px;
+            }
+            .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    @include media(lg) {
+        margin-top: var(--Gap-5x);
+
+        &__title {
+            font-size: 48px;
+        }
+
+        &__item {
+            border-radius: 24px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__inner {
+            padding: 24px;
+        }
+    }
+
+    @include media(md) {
+        &__item {
+            border-radius: 16px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__inner {
+            padding: 16px;
+        }
+
+        &.swiper-horizontal {
+
+            & > .swiper-pagination-bullets {
+                bottom: -30px;
+            }
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+            }
+        }
     }
 }
 
 .news-promo {
     padding-bottom: 87px;
+    margin-bottom: 60px;
 
     &__head {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         margin-bottom: 36px;
     }
+
     &__title {
         margin-bottom: 0;
     }
+
     &__link {
         color: var(--ColorsBlue);
         font-size: 16px;
@@ -397,6 +504,29 @@ a {
             background-color: var(--ColorsBlue);
         }
     }
+
+    @include media(xl) {
+        padding-bottom: 40px;
+        margin-bottom: 32px;
+    }
+
+    @include media(lg) {
+        padding-bottom: 32px;
+        margin-bottom: 24px;
+
+        &__head {
+            margin-bottom: var(--Gap-4x);
+        }
+    }
+
+    @include media(md) {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+
+        &__link {
+            font-size: 14px;
+        }
+    }
 }
 
 .main-news-slider,
@@ -405,6 +535,24 @@ a {
     .swiper-slide {
         width: 352px;
         height: auto;
+    }
+
+    @include media(xl) {
+        .swiper-slide {
+            width: 320px;
+        }
+    }
+
+    @include media(lg) {
+        .swiper-slide {
+            width: 280px;
+        }
+    }
+
+    @include media(md) {
+        .swiper-slide {
+            width: 260px;
+        }
     }
 }
 
@@ -416,6 +564,7 @@ a {
 
     &__img {
         margin-bottom: var(--Gap-2x);
+        max-width: 100%;
     }
 
     &__top {
@@ -448,10 +597,44 @@ a {
         margin-left: 22px;
         margin-right: 25px;
     }
+
+    @include media(xl) {
+        &__title {
+            font-size: 20px;
+        }
+    }
+
+    @include media(lg) {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__title,
+        &__date {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        &__date {
+            font-size: 14px;
+        }
+    }
+
+    @include media(md) {
+        &__title {
+            font-size: 15px;
+        }
+
+        &__title,
+        &__date {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
 }
 
 .form-callback {
-    margin-top: 150px;
+    margin-top: 100px;
 
     &__title {
         color: var(--ColorsBlack);
@@ -471,19 +654,28 @@ a {
         gap: var(--Gap-3x);
     }
 
-    &__input {
-        color: var(--ColorsBlack);
-        border: 0;
-        font-family: $font-inter;
-        font-size: 96px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: -5px;
-        width: 100%;
+    @include media(xl) {
+        margin-top: 80px;
 
-        &::placeholder {
-            color: var(--ColorsGray3);
+        &__form {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    @include media(lg) {
+
+    }
+
+    @include media(md) {
+        margin-top: 40px;
+
+        &__title {
+            font-size: 26px;
+        }
+
+        .btn {
+            width: 100%;
         }
     }
 }
