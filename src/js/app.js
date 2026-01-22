@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterOpenBtn = document.querySelector('.catalog-filter__btn-open')
     const filterCloseBtn = document.querySelector('.catalog-filter__mobile-close')
 
-    initPhoneMask('[data-field=phone]');
+    initPhoneMask('[data-field=phone]')
+    initInnMask()
 
     document.querySelectorAll("[data-fancybox-ajax]").forEach(element => {
         element.addEventListener("click", event => {
@@ -241,5 +242,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 prepare: (val, masked) => !masked.value && val === '8' ? "" : val
             })
         })
+    }
+
+
+    function initInnMask() {
+        const innInput = document.querySelector('#inn')
+
+        if (!innInput) return
+
+        const mask = IMask(innInput, {
+            mask: '00000000',
+            placeholderChar: '0', // символ-заполнитель
+            prepare: function (value, masked) {
+                return value.replace(/\D/g, '')
+            },
+            validate: function (value) {
+                // Проверка длины (ровно 8 цифр)
+                return value.replace(/\D/g, '').length === 8
+            }
+        });
+
+        return mask
     }
 })

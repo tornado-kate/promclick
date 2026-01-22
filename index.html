@@ -266,11 +266,16 @@
                 <input type="tel" class="form-control form-callback__input" data-field="phone" name="phone" placeholder="+7 900 000-00-00" value="" />
 
                 <label class="form-check form-check--agree">
-                    <input type="checkbox" class="form-check__input" hidden="" value="" checked>
-                    <a href="#" target="_blank" class="form-check__link">Согласен</a> на обработку персональных данных
+                    <input type="checkbox" class="form-check__input" hidden value="" checked>
+                    <span class="form-check__icon"></span>
+                    <span class="form-check__text">
+                        <a href="#" target="_blank" class="form-check__link">Согласен</a> на обработку персональных данных
+                    </span>
                 </label>
 
-                <button class="btn btn-primary btn-m" type="submit" disabled>Оставить номер</button>
+                <div class="form-callback__footer">
+                    <button class="btn btn-primary btn-m" type="submit" disabled>Оставить номер</button>
+                </div>
             </form>
         </div>
     </div>
