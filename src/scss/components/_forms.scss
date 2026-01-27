@@ -4,6 +4,15 @@
 .form-group {
     position: relative;
     margin-bottom: var(--Gap-1x);
+
+    &--phone,
+    &--email {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
 }
 
 .form-control {
@@ -70,9 +79,9 @@
     }
 
     @include media(md) {
-        font-size: 36px;
+        font-size: 32px;
         letter-spacing: -2px;
-        height: 60px;
+        height: 48px;
     }
 }
 
@@ -192,9 +201,24 @@
     }
 }
 
+.form-label {
+    color: var(--ColorsBlack);
+    font-family: $font-inter;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: var(--Gap-1x);
+
+    @include media(xl) {
+        font-size: 20px;
+    }
+
+    @include media(md) {
+        font-size: 16px;
+    }
+}
+
 .form-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-color: #ffffff;
     background-image: url('../../images/icons/arrow-down.svg');
@@ -228,29 +252,68 @@
         display: none;
     }
 
+    &--product {
+        font-size: 24px;
+        color: #1C1C1ECC;
+        height: 78px;
+        border-radius: 12px;
+        border: 1px solid rgba(73, 69, 79, 0.20);
+        padding: 12px 60px 12px 16px;
+        background-position: right 32px center;
+        background-image: url('../../images/icons/arrow-down-2.svg');
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     @include media(xl) {
         font-size: 16px;
         height: 48px;
+
+        &--product {
+            font-size: 18px;
+            height: 60px;
+        }
     }
 
     @include media(lg) {
         padding: 10px 12px;
         height: 40px;
         font-size: 14px;
+
+        &--product {
+            background-size: 20px 20px;
+            font-size: 16px;
+            height: 48px;
+            background-position: right 24px center;
+        }
+    }
+
+    @include media(md) {
+        &--product {
+            background-size: 16px 16px;
+            font-size: 16px;
+            height: 40px;
+            background-position: right 24px center;
+            padding-right: 40px;
+        }
     }
 }
 
 .form-modal {
+    position: relative;
+    padding: 32px 44px 40px 44px;
     width: 960px;
 
     &__title {
-        margin-bottom: 40px;
+        display: flex;
+        gap: var(--Gap-2x);
+        margin-bottom: var(--Gap-4x);
 
         &-item {
             color: var(--ColorsBlue2);
             font-family: $font-inter;
             font-size: 48px;
-            font-style: normal;
             font-weight: 700;
             line-height: 120%;
             border-bottom: 1px dashed var(--ColorsBlue2);
@@ -267,22 +330,157 @@
         }
     }
 
+    &__type {
+        display: flex;
+        gap: var(--Gap-3x);
+        margin-bottom: var(--Gap-3x);
+
+        &-item {
+            color: var(--ColorsBlue2);
+            font-family: $font-inter;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 120%;
+            border-bottom: 1px dashed var(--ColorsBlue2);
+            cursor: pointer;
+
+            &:has(input:checked){
+                border-bottom: 1px dashed transparent;
+                color: var(--ColorsBlack);
+            }
+
+            input {
+                display: none !important;
+            }
+        }
+    }
+
     .form-group {
-        margin-bottom: 40px;
+        margin-bottom: var(--Gap-4x);
     }
 
     &__footer {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: var(--Gap-3x);
         align-items: flex-start;
+    }
+
+    @include media(xl) {
+        padding: 30px;
+        width: 650px;
+
+        &__title-item {
+            font-size: 30px;
+        }
+
+        &__type-item {
+            font-size: 24px;
+        }
+    }
+
+    @include media(lg) {
+        padding: 24px;
+        width: 600px;
+
+        &__title-item {
+            font-size: 26px;
+        }
+
+        &__type-item {
+            font-size: 20px;
+        }
+    }
+
+    @include media(md) {
+        padding: 16px;
+        width: auto;
+        max-width: 100%;
+
+        &__title-item {
+            font-size: 20px;
+        }
+
+        &__type-item {
+            font-size: 16px;
+        }
+
+        &__footer {
+            .btn {
+                width: 100%;
+            }
+        }
     }
 }
 
-.f-html {
-    background: #FFF !important;
-    box-shadow: 0 4px 24.5px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 40px;
-    padding: 32px 44px 40px 44px !important;
+body {
+    .f-html {
+        background: var(--ColorsWhite);
+        box-shadow: 0 4px 24.5px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 40px;
+        padding: 0;
+    }
+
+    .f-button.is-close-button {
+        right: 24px;
+        top: 24px;
+        width: 40px;
+        height: 40px;
+
+        &:hover svg {
+            fill: var(--ColorsBlack);
+        }
+    }
+
+    .f-button svg {
+        fill: #E4E4E4;
+        width: 40px;
+        height: 40px;
+        stroke-width: 0;
+        transition: var(--transition-base);
+    }
+
+    @include media(xl) {
+        .f-html {
+            border-radius: 36px;
+        }
+    }
+
+    @include media(lg) {
+        .f-html {
+            border-radius: 20px;
+        }
+
+        .f-button.is-close-button {
+            right: 20px;
+            top: 20px;
+            width: 36px;
+            height: 36px;
+        }
+
+        .f-button svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    @include media(md) {
+        .f-html {
+            border-radius: 16px;
+        }
+
+        .f-button.is-close-button {
+            right: 16px;
+            top: 16px;
+            width: 32px;
+            height: 32px;
+        }
+
+        .f-button svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
 }
+
 

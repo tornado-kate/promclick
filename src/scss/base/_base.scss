@@ -10,6 +10,17 @@ html, body {
     box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 button {
     border: none;
     background: none;
@@ -502,7 +513,7 @@ a {
             }
 
             &.swiper-slide {
-                height: 195px;
+                height: 230px;
             }
         }
 

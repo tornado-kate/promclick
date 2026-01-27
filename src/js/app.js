@@ -1,17 +1,26 @@
-import {Swiper, SwiperSlide } from 'swiper';
-import { Pagination, Autoplay, Thumbs } from 'swiper/modules';
-import 'swiper/css/free-mode';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/thumbs';
+import {Swiper, SwiperSlide } from 'swiper'
+import { Pagination, Autoplay, Thumbs } from 'swiper/modules'
+import 'swiper/css/free-mode'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/thumbs'
 import 'swiper/css/controller'
 import { Fancybox } from '@fancyapps/ui'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
-import IMask from 'imask'
-
+import { initForms, initFancyForm } from './components/form-helper'
 window.Fancybox = Fancybox
 
 document.addEventListener('DOMContentLoaded', () => {
+    let forms = document.querySelectorAll('.form-validation')
+    forms.forEach((form) => initForms(form))
+
+    document.querySelectorAll('[data-fancybox-ajax]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault()
+            initFancyForm(e.currentTarget.href)
+        })
+    })
+
     const body = document.body
     const toggleMegaMenu = document.querySelector('.header__toggle-menu')
     const megaMenu = document.querySelector('.mega-menu')
@@ -22,33 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const topSearchBtn = document.querySelector('.form-search__btn')
     const filterOpenBtn = document.querySelector('.catalog-filter__btn-open')
     const filterCloseBtn = document.querySelector('.catalog-filter__mobile-close')
+    const tabs = document.querySelectorAll('.nav-tabs__item')
+    const tabsContents = document.querySelectorAll('.tab-content')
 
-    initPhoneMask('[data-field=phone]')
-    initInnMask()
-
-    document.querySelectorAll("[data-fancybox-ajax]").forEach(element => {
-        element.addEventListener("click", event => {
-            event.preventDefault()
-            console.log(element.getAttribute('href'))
-
-            Fancybox.show([{
-                src: element.getAttribute('href'),
-                type: 'ajax',
-                //preload: false, // отключает предварительную загрузку
-                //groupAttr: false,
-                //mainClass: 'popup',
-                //autoFocus: false,
-                //dragToClose: false,
-                //closeButton: false,
-                // Можно указать дополнительные опции, например, обработчики событий
-                on: {
-                    reveal: (fancybox, slide) => {
-                        console.log("Fancybox открылся")
-                    }
-                }
-            }])
-        })
-    })
 
     topSearchInput.addEventListener('focus', () => {
         topSearchBtn.classList.add('is-focused')
@@ -70,38 +55,79 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.toggle('no-scroll')
     })
 
-    const menuItems = document.querySelectorAll('.mm-navbar__item')
-    const contentItems = document.querySelectorAll('.mega-menu__item')
+// Работа с пунктами меню
+    const menuWrappers = document.querySelectorAll('.mm-navbar__item')
 
-    if (menuItems.length > 0 && contentItems.length > 0) {
-        menuItems[0].classList.add('is-active')
-        contentItems.forEach(content => {
-            if (content.getAttribute('data-content') === menuItems[0].getAttribute('data-navbar')) {
-                content.style.display = 'block'
+// Инициализация - первый пункт активен
+    if (menuWrappers.length > 0) {
+        menuWrappers[0].classList.add('is-active')
+    }
+
+// Обработчики событий
+    menuWrappers.forEach(wrapper => {
+        const link = wrapper.querySelector('.mm-navbar__link')
+
+        // Наведение мыши
+        wrapper.addEventListener('mouseenter', () => {
+            menuWrappers.forEach(w => w.classList.remove('is-active'))
+            wrapper.classList.add('is-active');
+        });
+
+        // Клик (для мобильных устройств)
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Если уже активен - скрываем
+            if (wrapper.classList.contains('is-active')) {
+                wrapper.classList.remove('is-active');
             } else {
-                content.style.display = 'none'
+                // Иначе показываем только этот пункт
+                menuWrappers.forEach(w => w.classList.remove('is-active'));
+                wrapper.classList.add('is-active');
             }
         });
-    }
-    menuItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const targetTab = item.getAttribute('data-navbar')
+    });
 
-            // Удаляем активный класс у всех пунктов (если есть)
-            menuItems.forEach(i => i.classList.remove('is-active'))
-            // Добавляем активный класс текущему
-            item.classList.add('is-active')
-
-            // Переключение контентов
-            contentItems.forEach(content => {
-                if (content.getAttribute('data-content') === targetTab) {
-                    content.style.display = 'block' // показываем нужный
-                } else {
-                    content.style.display = 'none' // скрываем остальные
-                }
-            })
-        })
-    })
+    // toggleMegaMenu.addEventListener('click', () => {
+    //     toggleMegaMenu.classList.toggle('is-active')
+    //     megaMenu.classList.toggle('is-active')
+    //     body.classList.toggle('no-scroll')
+    //     document.documentElement.classList.toggle('no-scroll')
+    // })
+    //
+    // const menuItems = document.querySelectorAll('.mm-navbar__item')
+    // const contentItems = document.querySelectorAll('.mega-menu__item')
+    //
+    // if (menuItems.length > 0 && contentItems.length > 0) {
+    //     menuItems[0].classList.add('is-active')
+    //     contentItems.forEach(content => {
+    //         if (content.getAttribute('data-content') === menuItems[0].getAttribute('data-navbar')) {
+    //             content.style.display = 'block'
+    //         } else {
+    //             content.style.display = 'none'
+    //         }
+    //     });
+    // }
+    //
+    // menuItems.forEach(item => {
+    //     item.addEventListener('mouseenter', () => {
+    //         const targetTab = item.getAttribute('data-navbar')
+    //
+    //         // Удаляем активный класс у всех пунктов (если есть)
+    //         menuItems.forEach(i => i.classList.remove('is-active'))
+    //         // Добавляем активный класс текущему
+    //         item.classList.add('is-active')
+    //
+    //         // Переключение контентов
+    //         contentItems.forEach(content => {
+    //             if (content.getAttribute('data-content') === targetTab) {
+    //                 content.style.display = 'block' // показываем нужный
+    //             } else {
+    //                 content.style.display = 'none' // скрываем остальные
+    //             }
+    //         })
+    //     })
+    // })
 
     const mainSlider = new Swiper('.main-slider', {
         modules: [Pagination, Autoplay],
@@ -216,52 +242,16 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    const tabs = document.querySelectorAll('.nav-tabs__item')
-    const contents = document.querySelectorAll('.tab-content')
-
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const target = tab.getAttribute('data-tab')
 
             tabs.forEach(t => t.classList.remove('is-active'))
-            contents.forEach(c => c.classList.remove('is-active'))
+            tabsContents.forEach(c => c.classList.remove('is-active'))
 
             tab.classList.add('is-active')
 
             document.getElementById(target).classList.add('is-active')
         })
     })
-
-    let masks
-    function initPhoneMask(el) {
-        const phones = document.querySelectorAll(el)
-
-        phones.forEach(phone => {
-            return masks = IMask(phone, {
-                mask: '+7 000 000-00-00',
-                prepare: (val, masked) => !masked.value && val === '8' ? "" : val
-            })
-        })
-    }
-
-
-    function initInnMask() {
-        const innInput = document.querySelector('#inn')
-
-        if (!innInput) return
-
-        const mask = IMask(innInput, {
-            mask: '00000000',
-            placeholderChar: '0', // символ-заполнитель
-            prepare: function (value, masked) {
-                return value.replace(/\D/g, '')
-            },
-            validate: function (value) {
-                // Проверка длины (ровно 8 цифр)
-                return value.replace(/\D/g, '').length === 8
-            }
-        });
-
-        return mask
-    }
 })

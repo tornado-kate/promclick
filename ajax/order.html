@@ -1,25 +1,55 @@
 <div class="form-modal">
-    <div class="form-modal__head">
-        <div class="form-modal__title">
-            <label class="form-modal__title-item">
-                <input type="radio" value="" name="title" checked />
-                Заявка на КП
-            </label>
-            <label class="form-modal__title-item">
-                <input type="radio" value="" name="title" />
-                или счет
-            </label>
+    <button class="f-button is-close-button" title="Close" data-fancybox-close="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M10.6673 31.6673L8.33398 29.334L17.6673 20.0007L8.33398 10.6673L10.6673 8.33398L20.0007 17.6673L29.334 8.33398L31.6673 10.6673L22.334 20.0007L31.6673 29.334L29.334 31.6673L20.0007 22.334L10.6673 31.6673Z"/>
+        </svg>
+    </button>
+    <form id="form-order" class="form-validation" novalidate>
+        <div class="form-modal__head">
+            <div class="form-modal__title">
+                <label class="form-modal__title-item">
+                    <input type="radio" value="" name="title" checked />
+                    Заявка на КП
+                </label>
+                <label class="form-modal__title-item">
+                    <input type="radio" value="" name="title" />
+                    или счет
+                </label>
+            </div>
         </div>
-    </div>
 
-    <form>
         <div class="form-group">
-            <label for="inn">ИНН</label>
-            <input type="text" id="inn" class="form-control" placeholder="00000000" />
+            <select class="form-select form-select--product" name="product">
+                <option selected>Стеклопластиковый настил ГФК 38х38 зелелый мат</option>
+                <option>Стеклопластиковый настил ГФК 38х38 зелелый мат 2</option>
+                <option>Стеклопластиковый настил ГФК 38х38 зелелый мат 3</option>
+            </select>
         </div>
+
         <div class="form-group">
-            <label for="phone">Номер телефона Указать email</label>
-            <input type="tel" id="phone" class="form-control" placeholder="+7 900 000-00-00" />
+            <label for="inn" class="form-label">ИНН</label>
+            <input type="number" id="inn" class="form-control" placeholder="00000000" required data-field="inn" autocomplete="off" />
+        </div>
+
+        <div class="form-modal__type">
+            <label class="form-modal__type-item">
+                <input type="radio" value="" name="type" checked />
+                Номер телефона
+            </label>
+            <label class="form-modal__type-item">
+                <input type="radio" value="" name="type" />
+                Указать email
+            </label>
+        </div>
+
+        <div class="form-group form-group--phone is-active">
+            <label for="phone"></label>
+            <input type="tel" id="phone" class="form-control" placeholder="+7 900 000-00-00" required data-field="phone" autocomplete="off" />
+        </div>
+
+        <div class="form-group form-group--email">
+            <label for="email"></label>
+            <input type="email" id="email" class="form-control" placeholder="name@domain.ru" required autocomplete="off" />
         </div>
 
         <div class="form-modal__footer">

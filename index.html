@@ -44,86 +44,62 @@
 <div class="mega-menu">
     <div class="container">
         <div class="mega-menu__row">
-            <div class="mega-menu__left">
-                <ul class="mm-navbar">
-                    <li>
-                        <a href="#" class="mm-navbar__item" data-navbar="1">
-                            <img src="images/temp/navbar-1.png" alt="" />
-                            Решетчатый настил
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="mm-navbar__item" data-navbar="2">
-                            <img src="images/temp/navbar-2.png" alt="" />
-                            Стеклопластик
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="mm-navbar__item" data-navbar="3">
-                            <img src="images/temp/navbar-2.png" alt="" />
-                            Электрика
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="mm-navbar__item" data-navbar="4">
-                            <img src="images/temp/navbar-2.png" alt="" />
-                            Инструмент
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mega-menu__right">
-                <div class="mega-menu__item" data-content="1">
-                    <h2 class="mega-menu__title">Решетчатый настил</h2>
-                    <ul class="mm-navbar-sub">
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Сварной настил</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Прессованный настил</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Ступени</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mega-menu__item" data-content="2">
-                    <h2 class="mega-menu__title">Стеклопластик</h2>
-                    <ul class="navbar-sub">
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Стеклопластиковый настил</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mega-menu__item" data-content="3">
-                    <h2 class="mega-menu__title">Электрика</h2>
-                    <ul class="navbar-sub">
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Электрика 1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Электрика 2</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Электрика 3</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mega-menu__item" data-content="4">
-                    <h2 class="mega-menu__title">Инструмент</h2>
-                    <ul class="navbar-sub">
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Инструмент 1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Инструмент 2</a>
-                        </li>
-                        <li>
-                            <a href="#" class="mm-navbar-sub__item">Инструмент 3</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="mm-navbar">
+                <li class="mm-navbar__item is-active" data-navbar="1">
+                    <a href="#" class="mm-navbar__link">
+                        <img src="images/temp/navbar-1.png" alt="">
+                        Решетчатый настил
+                    </a>
+                    <div class="mega-menu__item" data-content="1">
+                        <h2 class="mega-menu__title">Решетчатый настил</h2>
+                        <ul class="mm-navbar-sub">
+                            <li><a href="#" class="mm-navbar-sub__item">Сварной настил</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Прессованный настил</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Ступени</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mm-navbar__item" data-navbar="2">
+                    <a href="#" class="mm-navbar__link">
+                        <img src="images/temp/navbar-2.png" alt="">
+                        Стеклопластик
+                    </a>
+                    <div class="mega-menu__item" data-content="2">
+                        <h2 class="mega-menu__title">Стеклопластик</h2>
+                        <ul class="mm-navbar-sub">
+                            <li><a href="#" class="mm-navbar-sub__item">Стеклопластиковый настил</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mm-navbar__item" data-navbar="3">
+                    <a href="#" class="mm-navbar__link">
+                        <img src="images/temp/navbar-2.png" alt="">
+                        Электрика
+                    </a>
+                    <div class="mega-menu__item" data-content="3">
+                        <h2 class="mega-menu__title">Электрика</h2>
+                        <ul class="mm-navbar-sub">
+                            <li><a href="#" class="mm-navbar-sub__item">Электрика 1</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Электрика 2</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Электрика 3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mm-navbar__item" data-navbar="4">
+                    <a href="#" class="mm-navbar__link">
+                        <img src="images/temp/navbar-2.png" alt="">
+                        Инструмент
+                    </a>
+                    <div class="mega-menu__item" data-content="4">
+                        <h2 class="mega-menu__title">Инструмент</h2>
+                        <ul class="mm-navbar-sub">
+                            <li><a href="#" class="mm-navbar-sub__item">Инструмент 1</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Инструмент 2</a></li>
+                            <li><a href="#" class="mm-navbar-sub__item">Инструмент 3</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
@@ -261,7 +237,7 @@
     </div>
     <div class="form-callback">
         <div class="container">
-            <form class="form-callback__form">
+            <form class="form-callback__form form-validation" novalidate>
                 <h3 class="form-callback__title">Перезвоним и расскажем больше о продукции</h3>
                 <input type="tel" class="form-control form-callback__input" data-field="phone" name="phone" placeholder="+7 900 000-00-00" value="" />
 
