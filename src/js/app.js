@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         topSearchBtn.classList.remove('is-focused')
     })
 
-    toggleMegaMenu.addEventListener('click', () => {
+    toggleMegaMenu.addEventListener('click', (e) => {
+        e.preventDefault()
         toggleMegaMenu.classList.toggle('is-active')
         megaMenu.classList.toggle('is-active')
         body.classList.toggle('no-scroll')
