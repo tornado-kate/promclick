@@ -32,7 +32,10 @@
     --Gap-4x: 40px;
     --Gap-5x: 56px;
     --Gap-6x: 64px;
+    --Gap-7x: 32px;
+    --Gap-8x: 48px;
     --transition-base: all 0.3s ease-out;
+    --container-960px: 960px;
 
     @include media(xl) {
         --Gap-1x: 10px;
@@ -41,6 +44,9 @@
         --Gap-4x: 32px;
         --Gap-5x: 48px;
         --Gap-6x: 56px;
+        --Gap-7x: 26px;
+        --Gap-8x: 40px;
+        --container-960px: 100%;
     }
 
     @include media(lg) {
@@ -50,6 +56,8 @@
         --Gap-4x: 24px;
         --Gap-5x: 40px;
         --Gap-6x: 48px;
+        --Gap-7x: 18px;
+        --Gap-8x: 32px;
     }
 
     @include media(md) {
@@ -59,6 +67,8 @@
         --Gap-4x: 16px;
         --Gap-5x: 24px;
         --Gap-6x: 32px;
+        --Gap-7x: 12px;
+        --Gap-8x: 26px;
     }
 }
 
